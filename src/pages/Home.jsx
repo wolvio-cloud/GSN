@@ -1,6 +1,6 @@
 import React from 'react';
 import Navigation from "../components/home/Navigation1"
-// import Hero from "../components/home/Hero";
+import Hero from "../components/home/Hero";
 // import Impact from "../components/home/impact";
 // import Connect from "../components/home/Connect";
 // import Card from "../components/home/Card";
@@ -12,8 +12,8 @@ const Home = () => {
   return (
     <>
       <Navigation/>
-      {/* <Hero/>
-      <Impact/>
+      <Hero />
+      {/* <Impact/>
       <Connect />
       <Card />
       <Path />
@@ -23,7 +23,4 @@ const Home = () => {
     </>
   );
 };
-// const Home = () => {
-//   return <h1 className="text-4xl text-blue-500">GSN Home Test</h1>;
-// };
 export default Home;

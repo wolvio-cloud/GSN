@@ -2,104 +2,101 @@ import React, { useState } from "react";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
 
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
+  const toggleMenu = () => setIsOpen(!isOpen);
+  const toggleDropdown = () => setDropdownOpen(!dropdownOpen);
 
   return (
-    <nav className="w-full bg-[#1A1A1A] text-white px-6 py-4 flex justify-between items-center">
+    <nav className="absolute top-0 left-0 w-full flex justify-between items-center px-10 py-6 z-50">
       {/* Logo */}
-      <div className="text-3xl font-bold font-playfair tracking-wide">
+      <div className="text-5xl font-bold font-playfair text-[#F2C063] tracking-wide">
         GSN
       </div>
 
       {/* Desktop Menu */}
-      <div className="hidden md:flex space-x-8 font-playfair text-lg">
-        <a href="#home" className="text-white hover:text-[#FFC263] transition">
-          Home
-        </a>
+      <div className="hidden md:flex items-center space-x-10 bg-[#1A1A1A]/70 px-8 py-3 rounded-full text-lg font-playfair">
         <a
           href="#experience"
-          className="text-white hover:text-[#FFC263] transition"
+          className="text-white hover:text-[#F2C063] transition-colors duration-300"
         >
           GSN Experience
         </a>
         <a
           href="#vision"
-          className="text-white hover:text-[#FFC263] transition"
+          className="text-white hover:text-[#F2C063] transition-colors duration-300"
         >
           Our Vision
         </a>
         <a
           href="#community"
-          className="text-white hover:text-[#FFC263] transition"
+          className="text-white hover:text-[#F2C063] transition-colors duration-300"
         >
           Global Community
         </a>
         <a
           href="#franchising"
-          className="text-white hover:text-[#FFC263] transition"
+          className="text-white hover:text-[#F2C063] transition-colors duration-300"
         >
           GSN Franchising
         </a>
+
+        {/* About GSN Dropdown */}
+        <div className="relative">
+          <button
+            onClick={toggleDropdown}
+            className="text-white hover:text-[#F2C063] transition-colors duration-300 flex items-center"
+          >
+            About GSN
+           <span className="ml-1 text-xl leading-none">⌄</span>
+
+          </button>
+          {dropdownOpen && (
+            <div className="absolute top-10 left-0 bg-[#1A1A1A] rounded-md shadow-md py-2 w-48">
+              <a
+                href="#about"
+                className="block px-4 py-2 text-white hover:text-[#F2C063] transition-colors duration-300"
+              >
+                About Us
+              </a>
+              <a
+                href="#blog"
+                className="block px-4 py-2 text-white hover:text-[#F2C063] transition-colors duration-300"
+              >
+                Blog & Insights
+              </a>
+            </div>
+          )}
+        </div>
       </div>
 
-      {/* Call-to-Action Button */}
-      <button className="hidden md:inline-block bg-[#FFC263] text-black font-ubuntu font-medium px-5 py-2 rounded-full hover:bg-[#e6ad55] transition">
+      {/* CTA Button */}
+      <button className="hidden md:inline-block bg-[#F2C063] text-black font-ubuntu font-semibold px-6 py-3 rounded-full hover:bg-[#e6ad55] transition-all duration-300">
         Get Invited
       </button>
 
       {/* Mobile Menu Button */}
       <div className="md:hidden">
-        <button onClick={toggleMenu} className="focus:outline-none">
-          {isOpen ? (
-            <span className="text-3xl">&#10005;</span> // Close icon
-          ) : (
-            <span className="text-3xl">&#9776;</span> // Hamburger icon
-          )}
+        <button onClick={toggleMenu} className="text-white text-3xl focus:outline-none">
+          {isOpen ? "✕" : "☰"}
         </button>
       </div>
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="absolute top-16 left-0 w-full bg-[#1A1A1A] text-white flex flex-col space-y-4 py-6 px-6 md:hidden font-playfair text-lg">
-          <a
-            href="#home"
-            className="hover:text-[#FFC263]"
-            onClick={toggleMenu}
-          >
-            Home
-          </a>
-          <a
-            href="#experience"
-            className="hover:text-[#FFC263]"
-            onClick={toggleMenu}
-          >
-            GSN Experience
-          </a>
-          <a
-            href="#vision"
-            className="hover:text-[#FFC263]"
-            onClick={toggleMenu}
-          >
-            Our Vision
-          </a>
-          <a
-            href="#community"
-            className="hover:text-[#FFC263]"
-            onClick={toggleMenu}
-          >
-            Global Community
-          </a>
-          <a
-            href="#franchising"
-            className="hover:text-[#FFC263]"
-            onClick={toggleMenu}
-          >
-            GSN Franchising
-          </a>
-          <button className="bg-[#FFC263] text-black font-ubuntu font-medium px-5 py-2 rounded-full hover:bg-[#e6ad55] transition">
+        <div className="absolute top-20 left-0 w-full bg-[#1A1A1A] text-white flex flex-col space-y-5 py-6 px-6 md:hidden font-playfair text-lg">
+          <a href="#experience" onClick={toggleMenu} className="hover:text-[#F2C063]">GSN Experience</a>
+          <a href="#vision" onClick={toggleMenu} className="hover:text-[#F2C063]">Our Vision</a>
+          <a href="#community" onClick={toggleMenu} className="hover:text-[#F2C063]">Global Community</a>
+          <a href="#franchising" onClick={toggleMenu} className="hover:text-[#F2C063]">GSN Franchising</a>
+          <div>
+            <p className="hover:text-[#F2C063]">About GSN</p>
+            <div className="pl-4">
+              <a href="#about" onClick={toggleMenu} className="block hover:text-[#F2C063]">About Us</a>
+              <a href="#blog" onClick={toggleMenu} className="block hover:text-[#F2C063]">Blog & Insights</a>
+            </div>
+          </div>
+          <button className="bg-[#F2C063] text-black font-ubuntu font-semibold px-6 py-3 rounded-full hover:bg-[#e6ad55] transition-all duration-300">
             Get Invited
           </button>
         </div>

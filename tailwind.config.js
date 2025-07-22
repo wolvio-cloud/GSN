@@ -6,6 +6,7 @@ export default {
       fontFamily: {
         playfair: ["Playfair Display", "serif"],
         ubuntu: ["Ubuntu", "sans-serif"],
+        garamond : ["Garamond", "serif"],
       },
     },
   },
