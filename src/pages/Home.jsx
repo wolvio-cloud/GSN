@@ -7,7 +7,7 @@ import Card from "../components/home/Card";
 import Path from "../components/home/Path";
 import Testimonials from "../components/home/Testimonial";
 import Form from "../components/home/Form";
-// import Footer from "../components/home/Footer";
+import Footer from "../components/home/Footer";
 const Home = () => {
   return (
     <>
@@ -19,7 +19,7 @@ const Home = () => {
      <Path />
       <Testimonials />
        <Form />
-      {/* // <Footer />  */}
+      <Footer /> 
     </>
   );
 };
