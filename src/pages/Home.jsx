@@ -1,9 +1,9 @@
-import React from 'react';
-import Navigation from "../components/home/Navigation1"
+import React from "react";
+import Navigation from "../components/home/Navigation1";
 import Hero from "../components/home/Hero";
-// import Impact from "../components/home/impact";
-// import Connect from "../components/home/Connect";
-// import Card from "../components/home/Card";
+import Impact from "../components/home/Impact3";
+import Connect from "../components/home/Connect";
+import Card from "../components/home/Card";
 // import Path from "../components/home/Path";
 // import Testimonials from "../components/home/Testimonials";
 // import Form from "../components/home/Form";
@@ -11,15 +11,15 @@ import Hero from "../components/home/Hero";
 const Home = () => {
   return (
     <>
-      <Navigation/>
+      <Navigation />
       <Hero />
-      {/* <Impact/>
+      <Impact />
       <Connect />
       <Card />
-      <Path />
-      <Testimonials />
-      <Form />
-      <Footer /> */}
+      {/* // <Path />
+      // <Testimonials />
+      // <Form />
+      // <Footer />  */}
     </>
   );
 };
