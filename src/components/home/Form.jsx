@@ -1,10 +1,12 @@
 import React, { useState } from "react";
-import emailjs from "emailjs-com";
+import emailjs from "@emailjs/browser";
 
 const SERVICE_ID = "service_24wvktf";
-const TEMPLATE_ID = "template_1lrafh2"; // Contact Us template
-const AUTO_REPLY_TEMPLATE = "template_6kl9fo7"; // Auto-reply template
-const USER_ID = "xdPRdxRGgQeOV7BAK"; // Replace with your EmailJS public key
+const TEMPLATE_ID = "template_1lrafh2";
+const AUTO_REPLY_TEMPLATE = "template_6kl9fo7";
+const PUBLIC_KEY = "xdPRdxRGgQeOV7BAK";
+
+
 
 const Form = () => {
   const [formData, setFormData] = useState({
@@ -15,16 +17,39 @@ const Form = () => {
     message: "",
   });
 
+  const [errors, setErrors] = useState({});
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
+    setErrors((prev) => ({ ...prev, [name]: "" }));
   };
 
-  const handleSubmit = (e) => {
+  const validate = () => {
+    const newErrors = {};
+    if (!formData.fullName.trim()) newErrors.fullName = "Full name is required.";
+    if (!formData.email.trim()) {
+      newErrors.email = "Email is required.";
+    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
+      newErrors.email = "Enter a valid email.";
+    }
+    if (!formData.phone.trim()) newErrors.phone = "Phone number is required.";
+    if (!formData.subject.trim()) newErrors.subject = "Subject is required.";
+    if (!formData.message.trim()) newErrors.message = "Message is required.";
+    return newErrors;
+  };
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
+
+    const validationErrors = validate();
+    if (Object.keys(validationErrors).length > 0) {
+      setErrors(validationErrors);
+      return;
+    }
+
     setLoading(true);
 
     const templateParams = {
@@ -35,25 +60,30 @@ const Form = () => {
       message: formData.message,
     };
 
-    // ✅ Send Contact Email
-    emailjs
-      .send(SERVICE_ID, TEMPLATE_ID, templateParams, USER_ID)
-      .then(() => {
-        // ✅ Send Auto-Reply
-        return emailjs.send(SERVICE_ID, AUTO_REPLY_TEMPLATE, {
-          to_name: formData.fullName,
-          to_email: formData.email,
-        });
-      })
-      .then(() => {
-        setLoading(false);
-        setIsSubmitted(true);
-      })
-      .catch((error) => {
-        console.error("EmailJS Error:", error);
-        setLoading(false);
-        alert("Something went wrong. Please try again later.");
-      });
+    try {
+      // Send form email
+      const reponse = await emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams, PUBLIC_KEY);
+      console.log("reponse", reponse);
+
+      // Send auto-reply
+      await emailjs.send(
+        SERVICE_ID,
+        AUTO_REPLY_TEMPLATE,
+        {
+          name: formData.fullName,
+          email: formData.email,
+        },
+        PUBLIC_KEY // ← Add this
+      );
+
+
+      setIsSubmitted(true);
+    } catch (error) {
+      console.error("EmailJS Error:", error);
+      alert("Something went wrong. Please check your credentials or try again later.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   const handleReEdit = () => {
@@ -63,20 +93,17 @@ const Form = () => {
   return (
     <section className="w-full bg-white py-20 px-6 md:px-16 lg:px-24">
       <div className="max-w-6xl mx-auto flex flex-col lg:flex-row gap-12 items-start">
-        {/* ✅ Left Side Text */}
+        {/* Left Side */}
         <div className="flex-1">
           <h2 className="text-[40px] font-ubuntu font-bold text-[#1A1A1A] leading-snug">
-            Start your journey with <br /> GSN today !
+            Start your journey with <br /> GSN today!
           </h2>
           <p className="text-[15px] font-ubuntu font-normal text-[#1A1A1A] mt-8 leading-relaxed max-w-[480px]">
-            Whether you’re ready to join, have a question, or simply want to
-            explore how GSN can support your growth - we’re here to listen.
-            Reach out and take the first step toward meaningful connections and
-            purpose-driven collaboration.
+            Whether you’re ready to join, have a question, or simply want to explore how GSN can support your growth - we’re here to listen. Reach out and take the first step toward meaningful connections and purpose-driven collaboration.
           </p>
         </div>
 
-        {/* ✅ Right Side Form */}
+        {/* Right Side - Form */}
         <div className="flex-1 bg-[#d2dce4] rounded-2xl p-8 shadow-md">
           <h3 className="text-[30px] font-ubuntu font-bold text-[#1A1A1A] mb-6">
             Schedule your meeting.
@@ -84,56 +111,57 @@ const Form = () => {
 
           {!isSubmitted ? (
             <form onSubmit={handleSubmit} className="space-y-4">
-              <input
-                type="text"
-                name="fullName"
-                placeholder="Full Name *"
-                value={formData.fullName}
-                onChange={handleChange}
-                className="w-full p-4 rounded-md border border-gray-400 focus:outline-none text-[#1A1A1A]"
-                required
-              />
-              <input
-                type="email"
-                name="email"
-                placeholder="Email *"
-                value={formData.email}
-                onChange={handleChange}
-                className="w-full p-4 rounded-md border border-gray-400 focus:outline-none text-[#1A1A1A]"
-                required
-              />
-              <input
-                type="text"
-                name="phone"
-                placeholder="Phone Number *"
-                value={formData.phone}
-                onChange={handleChange}
-                className="w-full p-4 rounded-md border border-gray-400 focus:outline-none text-[#1A1A1A]"
-                required
-              />
-              <input
-                type="text"
-                name="subject"
-                placeholder="Subject *"
-                value={formData.subject}
-                onChange={handleChange}
-                className="w-full p-4 rounded-md border border-gray-400 focus:outline-none text-[#1A1A1A]"
-                required
-              />
-              <textarea
-                name="message"
-                placeholder="Message *"
-                value={formData.message}
-                onChange={handleChange}
-                className="w-full p-4 rounded-md border border-gray-400 focus:outline-none text-[#1A1A1A] h-[120px]"
-                required
-              ></textarea>
+              {["fullName", "email", "phone", "subject", "message"].map((field) => {
+                const isTextArea = field === "message";
+                const placeholderMap = {
+                  fullName: "Full Name *",
+                  email: "Email *",
+                  phone: "Phone Number *",
+                  subject: "Subject *",
+                  message: "Message *",
+                };
+
+                const inputClass =
+                  "w-full p-4 rounded-md border focus:outline-none text-[#1A1A1A]" +
+                  (errors[field] ? " border-red-500" : " border-gray-400");
+
+                return isTextArea ? (
+                  <div key={field}>
+                    <textarea
+                      name={field}
+                      placeholder={placeholderMap[field]}
+                      value={formData[field]}
+                      onChange={handleChange}
+                      className={`${inputClass} h-[120px]`}
+                      required
+                    />
+                    {errors[field] && (
+                      <p className="text-red-600 text-sm mt-1">{errors[field]}</p>
+                    )}
+                  </div>
+                ) : (
+                  <div key={field}>
+                    <input
+                      type={field === "email" ? "email" : "text"}
+                      name={field}
+                      placeholder={placeholderMap[field]}
+                      value={formData[field]}
+                      onChange={handleChange}
+                      className={inputClass}
+                      required
+                    />
+                    {errors[field] && (
+                      <p className="text-red-600 text-sm mt-1">{errors[field]}</p>
+                    )}
+                  </div>
+                );
+              })}
 
               <div className="flex justify-end gap-4 mt-6">
                 <button
                   type="submit"
                   disabled={loading}
-                  className="bg-[#f2c063] text-[#1A1A1A] font-ubuntu font-bold px-6 py-2 rounded-xl hover:opacity-90"
+                  className="bg-[#f2c063] text-[#1A1A1A] font-ubuntu font-bold px-6 py-2 rounded-xl hover:opacity-90 disabled:opacity-50"
                 >
                   {loading ? "Sending..." : "Submit"}
                 </button>
