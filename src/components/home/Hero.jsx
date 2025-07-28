@@ -6,7 +6,7 @@ const Hero = () => {
     <section className="relative w-full h-[130vh] flex items-end justify-center text-center overflow-hidden ">
       {/* Background Video */}
       <video
-        className="absolute top-0 left-0 w-full h-full object-cover "
+        className="absolute  left-0 w-full h-full  object-cover "
         src="/hero2.mp4"
         autoPlay
         loop
