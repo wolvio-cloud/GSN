@@ -17,7 +17,7 @@ const Navigation = () => {
       </div>
 
       {/* Desktop Menu */}
-      <div className="hidden md:flex items-center space-x-10 bg-[#1A1A1A]/40 px-8 py-3 rounded-full text-sm font-playfair">
+      <div className="hidden md:flex items-center space-x-10 bg-[#ffffff]/10 px-8 py-3 rounded-full text-sm font-playfair">
         <a
           href="#experience"
           className="text-white  transition-colors duration-300"

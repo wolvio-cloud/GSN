@@ -12,7 +12,7 @@
 //     name: "Ritika Sharma",
 //     role: "Digital Marketing Consultant",
 //     text: `"GSN gave me more than just leads — it gave me purpose-driven partners who align with my values."`,
-//     img:"/testimonial/t2.png",
+//     img: "/testimonial/t2.png",
 //   },
 //   {
 //     name: "Vikram Iyer",
@@ -77,45 +77,63 @@
 // ];
 
 // const Testimonials = () => {
-//   const containerRef = useRef(null);
-//   const tweenRef = useRef(null);
+//   const row1Ref = useRef(null);
+//   const row2Ref = useRef(null);
+//   const tween1Ref = useRef(null);
+//   const tween2Ref = useRef(null);
 
 //   useEffect(() => {
-//     const container = containerRef.current;
+//     const row1 = row1Ref.current;
+//     const row2 = row2Ref.current;
 
-//     // ✅ Infinite horizontal scrolling
-//     tweenRef.current = gsap.to(container, {
-//       x: "-50%", // moves half width (since we duplicate cards)
+//     // ✅ Row 1: Right ➝ Left (Faster)
+//     tween1Ref.current = gsap.to(row1, {
+//       x: "-50%",
 //       ease: "none",
 //       repeat: -1,
-//       duration: 40, // slower & smoother, adjust as needed
+//       duration: 10, // increased speed (smaller duration = faster)
 //     });
 
-//     // ✅ Pause on hover
-//     const handleEnter = () => tweenRef.current.pause();
-//     const handleLeave = () => tweenRef.current.resume();
+//     // ✅ Row 2: Left ➝ Right (Faster)
+//     tween2Ref.current = gsap.fromTo(
+//       row2,
+//       { x: "-50%" }, // start from left
+//       {
+//         x: "0%",
+//         ease: "none",
+//         repeat: -1,
+//         duration: 20, // slightly slower than row1 for variation
+//       }
+//     );
 
-//     container.addEventListener("mouseenter", handleEnter);
-//     container.addEventListener("mouseleave", handleLeave);
+//     // ✅ Pause on Hover for Both Rows
+//     const pauseRow1 = () => tween1Ref.current.pause();
+//     const resumeRow1 = () => tween1Ref.current.resume();
+//     const pauseRow2 = () => tween2Ref.current.pause();
+//     const resumeRow2 = () => tween2Ref.current.resume();
+
+//     row1.addEventListener("mouseenter", pauseRow1);
+//     row1.addEventListener("mouseleave", resumeRow1);
+//     row2.addEventListener("mouseenter", pauseRow2);
+//     row2.addEventListener("mouseleave", resumeRow2);
 
 //     return () => {
-//       container.removeEventListener("mouseenter", handleEnter);
-//       container.removeEventListener("mouseleave", handleLeave);
+//       row1.removeEventListener("mouseenter", pauseRow1);
+//       row1.removeEventListener("mouseleave", resumeRow1);
+//       row2.removeEventListener("mouseenter", pauseRow2);
+//       row2.removeEventListener("mouseleave", resumeRow2);
 //     };
 //   }, []);
 
 //   return (
 //     <section className="w-full bg-[#1A1A1A] py-20 px-6 md:px-16 lg:px-24 overflow-hidden">
-//             {/* ✅ Scrolling Container */}
-//       <div className="relative overflow-hidden">
-//         <div
-//           ref={containerRef}
-//           className="flex gap-6 w-[200%]" // double cards for loop
-//         >
+//       {/* ✅ Row 1 - Right ➝ Left */}
+//       <div className="relative  mb-6">
+//         <div ref={row1Ref} className="flex gap-6 w-[200%]">
 //           {[...testimonialsData, ...testimonialsData].map((t, index) => (
 //             <div
 //               key={index}
-//               className="bg-[#222] text-white rounded-2xl p-6 w-[410px] h-[230px] flex-shrink-0"
+//               className="bg-[#222] text-white rounded-2xl p-6 w-[480px] h-[240px] flex-shrink-0"
 //             >
 //               <div className="flex items-center gap-4 mb-4">
 //                 <img
@@ -133,11 +151,39 @@
 //           ))}
 //         </div>
 //       </div>
+
+//       {/* ✅ Row 2 - Left ➝ Right */}
+//       <div className="relative ">
+//         <div ref={row2Ref} className="flex gap-6 w-[200%]">
+//           {[...testimonialsData.reverse(), ...testimonialsData.reverse()].map(
+//             (t, index) => (
+//               <div
+//                 key={index}
+//                 className="bg-[#222] text-white rounded-2xl p-6 w-[480px] h-[240px] flex-shrink-0"
+//               >
+//                 <div className="flex items-center gap-4 mb-4">
+//                   <img
+//                     src={t.img}
+//                     alt={t.name}
+//                     className="w-12 h-12 rounded-full object-cover"
+//                   />
+//                   <div>
+//                     <h3 className="text-[16px] font-ubuntu font-bold">{t.name}</h3>
+//                     <p className="text-[13px] text-gray-400">{t.role}</p>
+//                   </div>
+//                 </div>
+//                 <p className="text-[14px] font-ubuntu leading-snug">{t.text}</p>
+//               </div>
+//             )
+//           )}
+//         </div>
+//       </div>
 //     </section>
 //   );
 // };
 
 // export default Testimonials;
+
 
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
@@ -219,84 +265,114 @@ const testimonialsData = [
 
 const Testimonials = () => {
   const row1Ref = useRef(null);
-  const tweenRef = useRef(null);
+  const row2Ref = useRef(null);
+  const tween1Ref = useRef(null);
+  const tween2Ref = useRef(null);
 
   useEffect(() => {
     const row1 = row1Ref.current;
+    const row2 = row2Ref.current;
 
-    // ✅ Infinite scrolling
-    tweenRef.current = gsap.to(row1, {
+    tween1Ref.current = gsap.to(row1, {
       x: "-50%",
       ease: "none",
       repeat: -1,
-      duration: 30, // Smooth speed
+      duration: 10,
     });
 
-    // ✅ Pause on hover
-    const handleEnter = () => tweenRef.current.pause();
-    const handleLeave = () => tweenRef.current.resume();
+    tween2Ref.current = gsap.fromTo(
+      row2,
+      { x: "-50%" },
+      {
+        x: "0%",
+        ease: "none",
+        repeat: -1,
+        duration: 10,
+      }
+    );
 
-    row1.addEventListener("mouseenter", handleEnter);
-    row1.addEventListener("mouseleave", handleLeave);
+    const pauseRow1 = () => tween1Ref.current.pause();
+    const resumeRow1 = () => tween1Ref.current.resume();
+    const pauseRow2 = () => tween2Ref.current.pause();
+    const resumeRow2 = () => tween2Ref.current.resume();
+
+    row1.addEventListener("mouseenter", pauseRow1);
+    row1.addEventListener("mouseleave", resumeRow1);
+    row2.addEventListener("mouseenter", pauseRow2);
+    row2.addEventListener("mouseleave", resumeRow2);
 
     return () => {
-      row1.removeEventListener("mouseenter", handleEnter);
-      row1.removeEventListener("mouseleave", handleLeave);
+      row1.removeEventListener("mouseenter", pauseRow1);
+      row1.removeEventListener("mouseleave", resumeRow1);
+      row2.removeEventListener("mouseenter", pauseRow2);
+      row2.removeEventListener("mouseleave", resumeRow2);
     };
   }, []);
 
   return (
-    <section className="w-full bg-[#1A1A1A] py-20 px-6 md:px-16 lg:px-24">
-            {/* ✅ Row 1: Infinite Scrolling */}
-      <div className="relative  overflow-x-visible  mb-6">
-                <div ref={row1Ref} className="flex gap-6 w-[200%]">
-          {[...testimonialsData.slice(0, 6), ...testimonialsData.slice(0, 6)].map(
+    <section className="w-full bg-[#1A1A1A] py-20 px-6 md:px-16 lg:px-24 overflow-hidden">
+      {/* ✅ Row 1 */}
+      <div className="relative mb-6">
+        <div
+          ref={row1Ref}
+          className="flex gap-6 w-[200%] flex-nowrap"
+        >
+          {[...testimonialsData, ...testimonialsData].map((t, index) => (
+            <div
+              key={index}
+             className="bg-[#222] text-white rounded-2xl p-4 sm:p-6 w-[280px] sm:w-[360px] md:w-[440px] lg:w-[480px] min-h-[300px] sm:min-h-[240px] flex-shrink-0"
+
+            >
+              <div className="flex items-center gap-4 mb-3">
+                <img
+                  src={t.img}
+                  alt={t.name}
+                  className="w-10 h-10 sm:w-12 sm:h-12 rounded-full object-cover"
+                />
+                <div>
+                  <h3 className="text-[14px] sm:text-[16px] font-ubuntu font-bold">{t.name}</h3>
+                  <p className="text-[12px] sm:text-[13px] text-gray-400">{t.role}</p>
+                </div>
+              </div>
+              <p className="text-[13px] sm:text-[14px] font-ubuntu leading-snug">
+                {t.text}
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* ✅ Row 2 */}
+      <div className="relative">
+        <div
+          ref={row2Ref}
+          className="flex gap-6 w-[200%] flex-nowrap"
+        >
+          {[...testimonialsData.reverse(), ...testimonialsData.reverse()].map(
             (t, index) => (
               <div
                 key={index}
-                className="bg-[#222] text-white rounded-2xl p-6 w-[480px] h-[240px] flex-shrink-0 "
+                className="bg-[#222] text-white rounded-2xl p-4 sm:p-6 w-[280px] sm:w-[360px] md:w-[440px] lg:w-[480px] min-h-[300px] sm:min-h-[240px] flex-shrink-0"
+
               >
-                <div className="flex items-center gap-4 mb-4">
+                <div className="flex items-center gap-4 mb-3">
                   <img
                     src={t.img}
                     alt={t.name}
-                    className="w-12 h-12 rounded-full object-cover"
+                    className="w-10 h-10 sm:w-12 sm:h-12 rounded-full object-cover"
                   />
                   <div>
-                    <h3 className="text-[16px] font-ubuntu font-bold">{t.name}</h3>
-                    <p className="text-[13px] text-gray-400">{t.role}</p>
+                    <h3 className="text-[14px] sm:text-[16px] font-ubuntu font-bold">{t.name}</h3>
+                    <p className="text-[12px] sm:text-[13px] text-gray-400">{t.role}</p>
                   </div>
                 </div>
-                <p className="text-[14px] font-ubuntu leading-snug">{t.text}</p>
+                <p className="text-[13px] sm:text-[14px] font-ubuntu leading-snug">
+                  {t.text}
+                </p>
               </div>
             )
           )}
         </div>
-      </div>
-
-      {/* ✅ Row 2: Static (2 Full Cards + 3rd Half Visible) */}
-      <div className="flex gap-6 overflow-x-visible">
-        {testimonialsData.slice(6, 9).map((t, index) => (
-          <div
-            key={index}
-            className={`bg-[#222] text-white rounded-2xl p-6 w-[480px] h-[240px] flex-shrink-0 ${
-              index === 2 ? "mr-[-200px]" : ""
-            }`} // ✅ Makes 3rd card half visible
-          >
-            <div className="flex items-center gap-4 mb-4">
-              <img
-                src={t.img}
-                alt={t.name}
-                className="w-12 h-12 rounded-full object-cover"
-              />
-              <div>
-                <h3 className="text-[16px] font-ubuntu font-bold">{t.name}</h3>
-                <p className="text-[13px] text-gray-400">{t.role}</p>
-              </div>
-            </div>
-            <p className="text-[14px] font-ubuntu leading-snug">{t.text}</p>
-          </div>
-        ))}
       </div>
     </section>
   );

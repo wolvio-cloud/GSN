@@ -33,7 +33,7 @@ const Path = () => {
       </div>
 
       {/* ✅ Steps */}
-      <div className="mt-16 flex flex-col md:flex-row items-center justify-between max-w-6xl mx-auto   relative">
+      <div className="mt-16 flex flex-col md:flex-row items-center justify-between max-w-6xl mx-auto relative gap-y-16 md:gap-y-0">
         {stepsData.map((step, index) => (
           <div
             key={index}

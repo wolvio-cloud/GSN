@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import emailjs from "@emailjs/browser";
 
-const SERVICE_ID = "service_24wvktf";
-const TEMPLATE_ID = "template_1lrafh2";
-const AUTO_REPLY_TEMPLATE = "template_6kl9fo7";
-const PUBLIC_KEY = "xdPRdxRGgQeOV7BAK";
+const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+const AUTO_REPLY_TEMPLATE = import.meta.env.VITE_EMAILJS_AUTO_REPLY_TEMPLATE;
+const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+
 
 
 

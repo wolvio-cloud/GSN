@@ -1,5 +1,5 @@
 import React from "react";
-import { FaAward,FaShieldAlt } from "react-icons/fa";
+import { FaAward, FaShieldAlt } from "react-icons/fa";
 
 const cardsData = [
   {
@@ -8,12 +8,18 @@ const cardsData = [
     text: "Connect with trusted professionals from diverse industries, all verified through GSN’s secure onboarding.",
   },
   {
-    icon: <img src="/tickIcon.png" alt="tick" className="w-[30px] h-[30px] " />,
+    icon: <img src="/tickIcon.png" alt="tick" className="w-[30px] h-[30px]" />,
     title: "Quality Referrals",
     text: "Receive and share high-quality referrals that match your expertise, values, and business goals.",
   },
   {
-   icon: <img src="/morningIcon.png" alt="Morning Icon" className="w-[30px] h-[30px]" />,
+    icon: (
+      <img
+        src="/morningIcon.png"
+        alt="Morning Icon"
+        className="w-[30px] h-[30px]"
+      />
+    ),
     title: "Spiritual Networking",
     text: "Participate in mindful sessions and conscious connections that fuel inner clarity and meaningful success.",
   },
@@ -27,17 +33,18 @@ const cardsData = [
 const Cards = () => {
   return (
     <section className="w-full bg-white py-16 px-6 md:px-16 lg:px-24 -mt-4">
-      <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
+      <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 justify-items-center">
         {cardsData.map((card, index) => (
           <div
             key={index}
             className="group rounded-2xl border border-gray-300 p-6 bg-white 
-                       shadow-md transition-all duration-300 
-                       hover:bg-[#324456] hover:shadow-lg cursor-pointer w-[270px] text-left"
+              shadow-md transition-all duration-300 
+              hover:bg-[#324456] active:bg-[#324456] focus:bg-[#324456]
+              hover:shadow-lg active:shadow-lg focus:shadow-lg
+              cursor-pointer w-[270px] text-left"
           >
             {/* ✅ Icon Hover Logic */}
             {card.title === "Spiritual Networking" ? (
-              // Morning Icon hover effect
               <div className="group-hover:filter group-hover:brightness-0 group-hover:invert transition duration-300">
                 <img
                   src="/morningIcon.png"
@@ -46,7 +53,6 @@ const Cards = () => {
                 />
               </div>
             ) : card.title === "Quality Referrals" ? (
-              // Tick Icon hover effect
               <div className="group-hover:filter group-hover:brightness-0 group-hover:invert transition duration-300">
                 <img
                   src="/tickIcon.png"
@@ -55,26 +61,18 @@ const Cards = () => {
                 />
               </div>
             ) : (
-              // Default React Icons hover
               <div className="text-[#324456] group-hover:text-white transition-colors duration-300">
                 {card.icon}
               </div>
             )}
 
-
             {/* ✅ Title */}
-            <h3
-              className="text-[17px] font-ubuntu font-bold mt-10 text-[#1A1A1A] 
-                         group-hover:text-white transition-colors duration-300"
-            >
+            <h3 className="text-[17px] font-ubuntu font-bold mt-10 text-[#1A1A1A] group-hover:text-white active:text-white focus:text-white transition-colors duration-300">
               {card.title}
             </h3>
 
             {/* ✅ Text */}
-            <p
-              className="text-[14px] font-ubuntu mt-2 text-[#1A1A1A] leading-snug 
-                         group-hover:text-white transition-colors duration-300"
-            >
+            <p className="text-[14px] font-ubuntu mt-2 text-[#1A1A1A] leading-snug group-hover:text-white active:text-white focus:text-white transition-colors duration-300">
               {card.text}
             </p>
           </div>
@@ -83,4 +81,5 @@ const Cards = () => {
     </section>
   );
 };
+
 export default Cards;
