@@ -10,7 +10,7 @@ const Navigation = () => {
 
   return (
     // <nav className="absolute top-0 left-0 w-full flex justify-between items-center px-10 py-6 z-50">
-    <nav className="fixed  top-10 left-0 w-full flex justify-between items-center px-10 py-4 z-50 ">
+    <nav className="absolute  top-10 left-0 w-full flex justify-between items-center px-10 py-4 z-50 ">
       {/* Logo */}
       <div className="text-5xl font-bold font-playfair text-[#F2C063] tracking-wide ml-4">
         GSN
