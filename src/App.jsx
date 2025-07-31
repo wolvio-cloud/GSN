@@ -1,17 +1,23 @@
+// src/App.jsx
 import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Navigation from "./components/common/Navigation1";
+import Footer from "./components/common/Footer";
 import Home from "./pages/Home";
+import Experience from "./pages/Experience";
 
-function App() {
-  return <Home />;
-}
+
+const App = () => {
+  return (
+    <Router>
+      <Navigation />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/experience" element={<Experience />} />
+             </Routes>
+      <Footer />
+    </Router>
+  );
+};
 
 export default App;
-// function App() {
-//   return (
-//     <div className="text-4xl text-red-500">
-//       Tailwind Test – Should be BIG & RED
-//     </div>
-//   );
-// }
-
-// export default App;
