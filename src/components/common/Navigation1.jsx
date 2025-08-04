@@ -180,10 +180,10 @@ const Navigation = () => {
           Our Vision
         </Link>
 
-        <a href="#community" className="text-white transition-colors duration-300">
+        <a href="/community" className="text-white transition-colors duration-300">
           Global Community
         </a>
-        <a href="#franchising" className="text-white transition-colors duration-300">
+        <a href="/franchising" className="text-white transition-colors duration-300">
           GSN Franchising
         </a>
 

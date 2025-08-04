@@ -16,12 +16,14 @@ const Hero = () => {
             {/* Text content */}
             <div className="relative z-10 px-4 max-w-4xl">
                 <h1 className="text-white text-3xl sm:text-4xl md:text-5xl font-bold leading-tight">
-                    Lead the Network, Grow the Vision
+                    Our Vision for Conscious Growth
                 </h1>
                 <p className="text-white text-base sm:text-lg md:text-xl mt-4">
-                    Become a pioneer in conscious business networking by launching a GSN chapter in your region.
-                    As a GSN franchise partner, you’ll help professionals grow through meaningful connections,
-                    AI-powered tools, and a spiritually aligned ecosystem – while building a purpose-driven venture of your own.
+                    Elevate Your Business Through At GSN, we’re building more than a network - we’re
+                    creating a global movement. One where business thrives through intentional
+                    connections, AI-driven insight, and a shared commitment to purpose. Our vision is to
+                    empower individuals and organizations to grow with integrity, clarity, and
+                    consciousness - together.h Meaningful Connections
                 </p>
             </div>
         </section>

@@ -1,15 +1,13 @@
-import Navigation from '../components/home/Navigation1'
 import Hero from '../components/Vision/Hero'
-import Footer from '../components/home/Footer'
-import ContentSection from '../components/Vision/ContentSection'
+import ContentSection1 from '../components/Vision/ContentSection1'
+import ContentSection2 from '../components/Vision/ContentSection2'
 
 const Vision = () => {
     return (
         <>
-            <Navigation />
             <Hero />
-            <ContentSection />
-            <Footer />
+            <ContentSection1 />
+            <ContentSection2 />
         </>
     )
 }
