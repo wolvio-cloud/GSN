@@ -2,23 +2,23 @@ import React from "react";
 
 const features1 = [
   {
-    title: "Connection With Intention",
+    title: "Purpose-Driven Business",
     description:
-      "Members don't just network - they align. Every interaction is designed to build relationships rooted in mutual respect and purpose.",
+      "GSN encourages entrepreneurs to stay grounded in their values while scaling their ventures with clarity and intention.",
   },
   {
-    title: "Flexibility in Engagement",
+    title: "Ethical Entrepreneurship",
     description:
-      "Choose how you connect - in-person, virtually, or hybrid - all designed to support your schedule without compromising authenticity.",
+      "Integrity isn’t optional - it’s foundational. Our community uplifts businesses that lead with ethics, empathy, and sustainability.",
   },
   {
-    title: "Trust-Centered Collaboration",
+    title: "Collective Empowerment",
     description:
-      "We believe trust is the currency of growth. GSN nurtures safe spaces for professionals to share, refer, and grow together.",
+      "GSN is not a competition. It’s a collective - where collaboration fuels momentum, and every win is shared.",
   },
 ];
 
-const ContentSection2= () => {
+const ContentSection2 = () => {
   return (
     <section className="bg-white py-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -28,12 +28,13 @@ const ContentSection2= () => {
           <div className="flex flex-col justify-start space-y-8 h-full">
             <div>
               <h1 className="text-2xl sm:text-2xl font-bold text-[#153153] leading-tight">
-                A New Era of Networking
+                Growth With Purpose
               </h1>
               <p className="text-lg sm:text-xl text-[#153153] mt-6">
-                GSN is redefining professional networking by merging technology with intention.
-                We're moving from cold transactions to conscious connections that are smarter,
-                deeper, and built to last.
+                We believe true success goes beyond revenue.
+                GSN fosters holistic growth - helping members
+                expand their businesses while remaining aligned
+                with their deeper purpose
               </p>
             </div>
 
