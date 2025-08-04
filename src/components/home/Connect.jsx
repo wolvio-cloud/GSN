@@ -1,6 +1,5 @@
 
 
-
 import React from "react";
 
 const Connect = () => {
@@ -25,32 +24,37 @@ const Connect = () => {
     },
   ];
 
-  const cardHeight = 480;
-  const gap = 20;
-  const totalHeight = cards.length * (cardHeight + gap);
+  const webCardHeight = 480;
+    const webGap = 30;
+  const mobileGap = 12;
 
   return (
-    <section className="relative w-full bg-white py-20 px-6 md:px-16 lg:px-24">
+    <section className="relative w-full bg-white py-16 px-6 md:px-16 lg:px-24">
       {/* Heading */}
-      <div className="text-center max-w-4xl mx-auto mb-24">
-        <h2 className="text-[32px] sm:text-[36px] md:text-[40px] font-ubuntu font-bold text-[#1A1A1A] leading-tight -mt-12">
+      <div className="text-center max-w-4xl mx-auto mb-16 sm:mb-24">
+        <h2 className="text-[28px] sm:text-[36px] md:text-[40px] font-ubuntu font-bold text-[#1A1A1A] leading-tight -mt-6">
           Connect · Evolve · Thrive
         </h2>
-        <p className="text-[18px] sm:text-[20px] md:text-[20px] font-ubuntu text-[#1A1A1A] mt-6 leading-snug">
+        <p className="text-[16px] sm:text-[20px] font-ubuntu text-[#1A1A1A] mt-4 sm:mt-6 leading-snug">
           Unlock the power of conscious Networking and AI Driven Collaboration
         </p>
       </div>
 
       {/* Cards */}
-      <div className="relative" style={{ height: `${totalHeight}px` }}>
+      <div
+        className="relative"
+        style={{
+          height: `calc(${cards.length} * (${webCardHeight}px + ${webGap}px))`,
+        }}
+      >
         {cards.map((card, i) => {
           const isReversed = card.index === "02";
 
           return (
             <div
               key={i}
-              className={`sticky top-0 z-[${i + 1}] h-[480px] w-full bg-[#324456] rounded-[30px] text-white overflow-hidden p-6 sm:p-10 flex flex-col sm:block`}
-              style={{ transform: `translateY(${i * gap}px)` }}
+              className={`sticky top-0 z-[${i + 1}] h-[360px] sm:h-[480px] w-full bg-[#324456] rounded-[30px] text-white overflow-hidden p-6 sm:p-10 flex flex-col sm:block`}
+              style={{ transform: `translateY(${i * mobileGap}px)` }}
             >
               {/* Pattern background */}
               <div
@@ -71,7 +75,7 @@ const Connect = () => {
                 alt={`Connect ${card.index}`}
                 className={`absolute bottom-0 ${
                   isReversed ? "left-0" : "right-0"
-                } w-[240px] sm:w-[450px] h-[200px] sm:h-[350px] object-contain sm:object-cover`}
+                } w-[180px] sm:w-[450px] h-[160px] sm:h-[350px] object-contain sm:object-cover`}
                 style={{
                   borderTopLeftRadius: isReversed ? "0px" : "40px",
                   borderTopRightRadius: isReversed ? "40px" : "0px",
@@ -86,17 +90,17 @@ const Connect = () => {
                   isReversed ? "sm:ml-auto sm:text-right" : ""
                 }`}
               >
-                <h3 className="text-[20px] sm:text-[24px] font-ubuntu font-bold">
+                <h3 className="text-[18px] sm:text-[24px] font-ubuntu font-bold">
                   {card.title}
                 </h3>
-                <p className="text-[16px] sm:text-[18px] mt-2 sm:mt-4 font-ubuntu leading-snug">
+                <p className="text-[14px] sm:text-[18px] mt-2 sm:mt-4 font-ubuntu leading-snug">
                   {card.desc}
                 </p>
               </div>
 
               {/* Card Number */}
               <span
-                className={`text-[28px] sm:text-[40px] font-playfair absolute bottom-4 sm:bottom-6 ${
+                className={`text-[24px] sm:text-[40px] font-playfair absolute bottom-4 sm:bottom-6 ${
                   isReversed ? "right-6 sm:right-10" : "left-6 sm:left-10"
                 }`}
               >

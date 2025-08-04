@@ -1,5 +1,5 @@
 import React from "react";
-import Navigation from "../components/home/Navigation1";
+import Navigation from "../components/common/Navigation1";
 import Hero from "../components/home/Hero";
 import Impact from "../components/home/Impact3";
 import Connect from "../components/home/Connect";
@@ -7,7 +7,7 @@ import Card from "../components/home/Card";
 import Path from "../components/home/Path";
 import Testimonials from "../components/home/Testimonial";
 import Form from "../components/home/Form";
-import Footer from "../components/home/Footer";
+// import Footer from "../components/common/Footer";
 const Home = () => {
   return (
     <>
@@ -19,7 +19,7 @@ const Home = () => {
       <Path />
       <Testimonials />
       <Form />
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 };

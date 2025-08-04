@@ -10,7 +10,11 @@ const Navigation = () => {
 
   return (
     // <nav className="absolute top-0 left-0 w-full flex justify-between items-center px-10 py-6 z-50">
+<<<<<<< HEAD
+    <nav className=" absolute  top-10 left-0 w-full flex justify-between items-center px-10 py-4 z-50 ">
+=======
     <nav className="absolute  top-10 left-0 w-full flex justify-between items-center px-10 py-4 z-50 ">
+>>>>>>> bc68c4c79fe65f2c0905a9de25ee4d09577fab05
       {/* Logo */}
       <div className="text-5xl font-bold font-playfair text-[#F2C063] tracking-wide ml-4">
         GSN
@@ -80,7 +84,7 @@ const Navigation = () => {
       <div className="md:hidden">
         <button
           onClick={toggleMenu}
-          className="text-white text-3xl focus:outline-none"
+          className="text-white text-4xl focus:outline-none"
         >
           {isOpen ? "✕" : "☰"}
         </button>
