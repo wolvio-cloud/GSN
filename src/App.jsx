@@ -1,8 +1,10 @@
 import React from "react";
 import Home from "./pages/Home";
+import GSNFranchising from "./pages/GSNFranchising";
+import Vision from "./pages/Vision";
 
 function App() {
-  return <Home />;
+  return <Vision />;
 }
 
 export default App;
