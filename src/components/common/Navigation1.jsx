@@ -144,10 +144,10 @@ const Navigation = () => {
           Our Vision
         </Link>
 
-        <a href="#community" className="text-white transition-colors duration-300">
+        <a href="#community" className="text-white font-bold transition-colors duration-300">
           Global Community
         </a>
-        <a href="#franchising" className="text-white transition-colors duration-300">
+        <a href="/franchising" className="text-white font-bold transition-colors duration-300">
           GSN Franchising
         </a>
 
@@ -200,7 +200,7 @@ const Navigation = () => {
           <a href="#community" onClick={toggleMenu} className="hover:text-[#F2C063]">
             Global Community
           </a>
-          <a href="#franchising" onClick={toggleMenu} className="hover:text-[#F2C063]">
+          <a href="/franchising" onClick={toggleMenu} className="hover:text-[#F2C063]">
             GSN Franchising
           </a>
           <div>

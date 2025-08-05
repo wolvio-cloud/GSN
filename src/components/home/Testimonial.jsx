@@ -1,3 +1,5 @@
+
+
 import React from "react";
 import styles from "./Testimonials.module.css";
 
@@ -77,55 +79,43 @@ const testimonialsData = [
 ];
 
 const Testimonials = () => {
+  const renderCard = (t, index) => (
+    <div
+      key={index}
+      className="bg-[#222] hover:bg-[#242c34]  text-white hover:text-white 
+      rounded-2xl p-4 sm:p-6 w-[280px] sm:w-[360px] md:w-[440px] lg:w-[480px] 
+      min-h-[240px] flex-shrink-0 cursor-pointer transition duration-300"
+    >
+      <div className="flex items-center gap-4 mb-3">
+        <img
+          src={t.img}
+          alt={t.name}
+          className="w-10 h-10 sm:w-12 sm:h-12 rounded-full object-cover"
+        />
+        <div>
+          <h3 className="text-[14px] sm:text-[16px] font-ubuntu font-bold">{t.name}</h3>
+          <p className="text-[12px] sm:text-[13px] text-gray-400">{t.role}</p>
+        </div>
+      </div>
+      <p className="text-[13px] sm:text-[14px] font-ubuntu leading-snug">{t.text}</p>
+    </div>
+  );
+
   return (
     <section className="w-full bg-[#1A1A1A] py-20 px-6 md:px-16 lg:px-24 text-white">
       {/* Row 1 */}
       <div className={`${styles.scrollContainer} ${styles.pauseOnHover} mb-6`}>
         <div className={styles.scrollContentLeft}>
-          {[...testimonialsData, ...testimonialsData].map((t, index) => (
-            <div
-              key={index}
-              className="bg-[#222] text-white rounded-2xl p-4 sm:p-6 w-[280px] sm:w-[360px] md:w-[440px] lg:w-[480px] min-h-[240px] flex-shrink-0"
-            >
-              <div className="flex items-center gap-4 mb-3">
-                <img
-                  src={t.img}
-                  alt={t.name}
-                  className="w-10 h-10 sm:w-12 sm:h-12 rounded-full object-cover"
-                />
-                <div>
-                  <h3 className="text-[14px] sm:text-[16px] font-ubuntu font-bold">{t.name}</h3>
-                  <p className="text-[12px] sm:text-[13px] text-gray-400">{t.role}</p>
-                </div>
-              </div>
-              <p className="text-[13px] sm:text-[14px] font-ubuntu leading-snug">{t.text}</p>
-            </div>
-          ))}
+          {[...testimonialsData, ...testimonialsData].map((t, index) => renderCard(t, index))}
         </div>
       </div>
 
       {/* Row 2 */}
       <div className={`${styles.scrollContainer} ${styles.pauseOnHover}`}>
         <div className={styles.scrollContentRight}>
-          {[...testimonialsData.reverse(), ...testimonialsData.reverse()].map((t, index) => (
-            <div
-              key={index}
-              className="bg-[#222] text-white rounded-2xl p-4 sm:p-6 w-[280px] sm:w-[360px] md:w-[440px] lg:w-[480px] min-h-[240px] flex-shrink-0"
-            >
-              <div className="flex items-center gap-4 mb-3">
-                <img
-                  src={t.img}
-                  alt={t.name}
-                  className="w-10 h-10 sm:w-12 sm:h-12 rounded-full object-cover"
-                />
-                <div>
-                  <h3 className="text-[14px] sm:text-[16px] font-ubuntu font-bold">{t.name}</h3>
-                  <p className="text-[12px] sm:text-[13px] text-gray-400">{t.role}</p>
-                </div>
-              </div>
-              <p className="text-[13px] sm:text-[14px] font-ubuntu leading-snug">{t.text}</p>
-            </div>
-          ))}
+          {[...testimonialsData.reverse(), ...testimonialsData.reverse()].map((t, index) =>
+            renderCard(t, index + testimonialsData.length)
+          )}
         </div>
       </div>
     </section>

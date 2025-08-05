@@ -29,10 +29,10 @@ const Connect = () => {
   const mobileGap = 12;
 
   return (
-    <section className="relative w-full bg-white py-16 px-6 md:px-16 lg:px-24">
+    <section className="relative w-full bg-white py-16 px-6 md:px-16 lg:px-24 ">
       {/* Heading */}
       <div className="text-center max-w-4xl mx-auto mb-16 sm:mb-24">
-        <h2 className="text-[28px] sm:text-[36px] md:text-[40px] font-ubuntu font-bold text-[#1A1A1A] leading-tight -mt-6">
+        <h2 className="text-[28px] sm:text-[36px] md:text-[40px] font-ubuntu font-bold text-[#1A1A1A] leading-tight ">
           Connect · Evolve · Thrive
         </h2>
         <p className="text-[16px] sm:text-[20px] font-ubuntu text-[#1A1A1A] mt-4 sm:mt-6 leading-snug">
@@ -60,10 +60,10 @@ const Connect = () => {
               <div
                 className={`absolute inset-y-0 ${
                   isReversed ? "left-0" : "right-0"
-                } mt-8 w-1/2 bg-[#2a3947] opacity-20 bg-[radial-gradient(white_1px,transparent_1px)] bg-[length:14px_14px]`}
+                } mt-8 w-1/2 bg-[#111111] opacity-20 bg-[radial-gradient(white_1px,transparent_1px)] bg-[length:14px_14px]`}
                 style={{
-                  borderTopRightRadius: isReversed ? "0px" : "50px",
-                  borderTopLeftRadius: isReversed ? "50px" : "0px",
+                  borderTopRightRadius: isReversed ? "50px" : "0px",
+                  borderTopLeftRadius: isReversed ? "0px" : "50px",
                   borderBottomLeftRadius: isReversed ? "40px" : "0px",
                   borderBottomRightRadius: isReversed ? "0px" : "40px",
                 }}
@@ -75,12 +75,12 @@ const Connect = () => {
                 alt={`Connect ${card.index}`}
                 className={`absolute bottom-0 ${
                   isReversed ? "left-0" : "right-0"
-                } w-[180px] sm:w-[450px] h-[160px] sm:h-[350px] object-contain sm:object-cover`}
+                } w-[190px] sm:w-[460px] h-[160px] sm:h-[350px] object-contain sm:object-cover`}
                 style={{
                   borderTopLeftRadius: isReversed ? "0px" : "40px",
                   borderTopRightRadius: isReversed ? "40px" : "0px",
-                  borderBottomLeftRadius: isReversed ? "40px" : "0px",
-                  borderBottomRightRadius: isReversed ? "0px" : "40px",
+                  borderBottomLeftRadius: isReversed ? "20px" : "0px",
+                  borderBottomRightRadius: isReversed ? "0px" : "20px",
                 }}
               />
 

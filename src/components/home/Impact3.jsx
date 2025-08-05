@@ -31,7 +31,7 @@ const Impact = () => {
           <div
             className="relative rounded-l-3xl shadow-md 
                        w-full sm:w-[280px] h-[230px] 
-                       mt-4 sm:-mt-5 sm:ml-4 overflow-hidden"
+                       mt-4 sm:-mt-5 sm:ml-4 "
             style={{
               background: "linear-gradient(135deg, #80EAF6 0%, #9080E7 100%)",
               borderTopRightRadius: "0px",
@@ -49,8 +49,9 @@ const Impact = () => {
                        <img
   src="/suit.png"
   alt="Business"
-  className="absolute bottom-0 right-[-90px] h-full w-auto   max-h-full object-contain  scale-[1.3] z-10"
-/>
+  className="absolute bottom-[29px] right-[-80px] sm:right-[-90px] scale-[1.25] sm:scale-[1.3] z-10 object-contain pointer-events-none"
+  />
+
 
           </div>
 

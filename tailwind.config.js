@@ -9,6 +9,9 @@ export default {
         garamond : ["Garamond", "serif"],
       },
     },
+    transitionProperty: {
+      transform: "transform",
+    },
   },
   plugins: [],
 };
