@@ -65,7 +65,7 @@
 } */
 
 .scrollContainer {
-  overflow: hidden;
+  overflow-x: visible;
   width: 100%;
 }
 

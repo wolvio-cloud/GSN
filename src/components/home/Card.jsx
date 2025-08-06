@@ -50,7 +50,7 @@ const Cards = () => {
             <div
               key={index}
               className="relative group rounded-2xl border border-gray-300 p-6 bg-white 
-                shadow-md transition-all duration-300 hover:bg-[#324456] cursor-pointer 
+                shadow-md transition-all duration-300 hover:bg-[#1A1A1A] cursor-pointer 
                 w-[270px] text-left z-10 overflow-visible"
             >
               {/* === LINE WITH DOT === */}

@@ -49,7 +49,7 @@ const ContentSection1 = () => {
           <div></div>
 
           {/* Right Column */}
-          <div className="flex flex-col justify-start space-y-8 h-full">
+          <div className="flex flex-col justify-start space-y-8 h-full ">
             <div className="flex-1">
               <div className="bg-[#D2DCE4] rounded-3xl p-6 sm:p-8 h-full">
                 <h3 className="text-2xl font-bold text-[#153153]">{features1[1].title}</h3>

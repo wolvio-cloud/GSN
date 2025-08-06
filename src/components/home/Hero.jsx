@@ -20,7 +20,7 @@ const Hero = () => {
       {/* Background Video */}
       <video
         className="absolute top-0 left-0 w-full h-full object-cover"
-        src="/heromain.mp4"
+        src="/h1main.mp4"
         autoPlay
         loop
         muted

@@ -89,10 +89,11 @@ const stepsData = [
 
 const Path = () => {
   return (
-    <section
-      className="w-full py-20 px-6 md:px-16 lg:px-24 bg-[#04142c] bg-no-repeat bg-center bg-contain"
-      style={{ backgroundImage: "url('/pathbg.png')" }}
-    >
+   <section
+  className="w-full py-20 px-6 md:px-16 lg:px-24 bg-[#1A1A1A] bg-no-repeat bg-center bg-[length:600px]"
+  style={{ backgroundImage: "url('/pathbg.png')" }}
+>
+
       {/* ✅ Heading */}
       <div className="text-center max-w-5xl mx-auto">
         <h2 className="text-[40px] font-ubuntu font-bold text-white leading-tight">

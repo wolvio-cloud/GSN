@@ -69,7 +69,7 @@ const Inspiring = () => {
         {/* LINE + DOTS Between Card 1 & 2 */}
         <div className="w-[2px] h-12 bg-[#8d8e91] relative  flex-col items-center md:-mt-16 md:ml-150 hidden md:flex ">
           <div className="w-3 h-3 rounded-full bg-[#8d8e91] absolute -top-2"></div>
-          <div className="w-3 h-3 rounded-full bg-[#8d8e91] absolute -bottom-2"></div>
+          <div className="w-3 h-3 rounded-full bg-[#8d8e91] absolute -bottom-1"></div>
         </div>
 
         {/* CARD 2 */}
@@ -96,8 +96,8 @@ const Inspiring = () => {
 
         {/* HORIZONTAL LINE Between Card 2 & 3 */}
         <div className="h-[2px] w-full max-w-[90px] bg-[#8d8e91] relative  items-center justify-center  md:-mt-50 hidden md:flex">
-          <div className="w-3 h-3 rounded-full bg-[#8d8e91] absolute -left-2"></div>
-          <div className="w-3 h-3 rounded-full bg-[#8d8e91] absolute -right-2"></div>
+          <div className="w-3 h-3 rounded-full bg-[#8d8e91] absolute -left-1"></div>
+          <div className="w-3 h-3 rounded-full bg-[#8d8e91] absolute -right-1"></div>
         </div>
 
         {/* CARD 3 */}

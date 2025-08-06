@@ -57,9 +57,9 @@ const Gsnexp = () => {
 
         {/* Vertical line + dots between Card 1 & 2 */}
         <div className="hidden md:flex flex-col items-center md:-mt-20 md:ml-150">
-          <div className="w-3 h-3 bg-[#8d8e91] rounded-full -left-2" />
+          <div className="w-3 h-3 bg-[#8d8e91] rounded-full mt-1" />
           <div className="w-[2px] h-12 bg-[#8d8e91]" />
-          <div className="w-3 h-3 bg-[#8d8e91] rounded-full -right-2" />
+          <div className="w-3 h-3 bg-[#8d8e91] rounded-full mb-1 " />
         </div>
 
         {/* Card 2 */}
@@ -81,8 +81,8 @@ const Gsnexp = () => {
 
         {/* Horizontal line + dots between Card 2 & 3 */}
         <div className="hidden md:flex items-center justify-center w-[125px] h-[2px] bg-[#8d8e91] relative -mt-14 md:-mt-50 -ml-10 ">
-          <div className="w-3 h-3 bg-[#8d8e91] rounded-full absolute -left-2" />
-          <div className="w-3 h-3 bg-[#8d8e91] rounded-full absolute -right-2" />
+          <div className="w-3 h-3 bg-[#8d8e91] rounded-full absolute -left-1" />
+          <div className="w-3 h-3 bg-[#8d8e91] rounded-full absolute -right-1" />
         </div>
 
         {/* Card 3 */}
