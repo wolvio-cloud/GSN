@@ -1,6 +1,4 @@
-
-
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import styles from "./Testimonials.module.css";
 
 const testimonialsData = [
@@ -79,12 +77,33 @@ const testimonialsData = [
 ];
 
 const Testimonials = () => {
+  const sectionRef = useRef(null);
+  const [animate, setAnimate] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setAnimate(true);
+          observer.disconnect(); // Only trigger once
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
   const renderCard = (t, index) => (
     <div
       key={index}
-      className="bg-[#222] hover:bg-[#242c34]  text-white hover:text-white 
-      rounded-2xl p-4 sm:p-6 w-[280px] sm:w-[360px] md:w-[440px] lg:w-[480px] 
-      min-h-[240px] flex-shrink-0 cursor-pointer transition duration-300"
+      className="bg-[#222] hover:bg-[#242c34] text-white rounded-2xl p-4 sm:p-6 
+      w-[280px] sm:w-[360px] md:w-[440px] lg:w-[480px] min-h-[240px] 
+      flex-shrink-0 cursor-pointer transition duration-300"
     >
       <div className="flex items-center gap-4 mb-3">
         <img
@@ -101,21 +120,31 @@ const Testimonials = () => {
     </div>
   );
 
+  const repeatedData = [...testimonialsData, ...testimonialsData];
+
   return (
-    <section className="w-full bg-[#1A1A1A] py-20 px-6 md:px-16 lg:px-24 text-white">
+    <section
+      ref={sectionRef}
+      className="w-full bg-[#1A1A1A] py-20 px-6 md:px-16 lg:px-24 text-white"
+    >
       {/* Row 1 */}
-      <div className={`${styles.scrollContainer} ${styles.pauseOnHover} mb-6`}>
-        <div className={styles.scrollContentLeft}>
-          {[...testimonialsData, ...testimonialsData].map((t, index) => renderCard(t, index))}
+      <div className={`${styles.scrollContainer} ${styles.pauseOnHover} mb-8`}>
+        <div
+          className={`${styles.scrollWrapper} ${animate ? styles.scrollLeft : ""}`}
+        >
+          {repeatedData.map((t, i) => renderCard(t, i))}
         </div>
       </div>
 
       {/* Row 2 */}
       <div className={`${styles.scrollContainer} ${styles.pauseOnHover}`}>
-        <div className={styles.scrollContentRight}>
-          {[...testimonialsData.reverse(), ...testimonialsData.reverse()].map((t, index) =>
-            renderCard(t, index + testimonialsData.length)
-          )}
+        <div
+          className={`${styles.scrollWrapper} ${animate ? styles.scrollRight : ""}`}
+        >
+          {repeatedData
+            .slice()
+            .reverse()
+            .map((t, i) => renderCard(t, i + 100))}
         </div>
       </div>
     </section>
