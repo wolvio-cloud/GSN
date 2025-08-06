@@ -8,11 +8,11 @@
   display: flex;
   flex-wrap: nowrap;
   width: fit-content;
-  gap: 1.5rem;
   will-change: transform;
+  padding-left: 0;
+  padding-right: 0;
 }
 
-/* Controlled animation classes */
 .scrollLeft {
   animation: scrollLeft 60s linear infinite;
 }

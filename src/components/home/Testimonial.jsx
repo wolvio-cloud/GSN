@@ -103,7 +103,7 @@ const Testimonials = () => {
       key={index}
       className="bg-[#222] hover:bg-[#242c34] text-white rounded-2xl p-4 sm:p-6 
       w-[280px] sm:w-[360px] md:w-[440px] lg:w-[480px] min-h-[240px] 
-      flex-shrink-0 cursor-pointer transition duration-300"
+      flex-shrink-0 cursor-pointer transition duration-300 mr-4"
     >
       <div className="flex items-center gap-4 mb-3">
         <img
@@ -125,7 +125,7 @@ const Testimonials = () => {
   return (
     <section
       ref={sectionRef}
-      className="w-full bg-[#1A1A1A] py-20 px-6 md:px-16 lg:px-24 text-white"
+      className="w-full bg-[#1A1A1A] py-20 px-0 text-white"
     >
       {/* Row 1 */}
       <div className={`${styles.scrollContainer} ${styles.pauseOnHover} mb-8`}>
