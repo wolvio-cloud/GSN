@@ -31,7 +31,7 @@ const Impact = () => {
           <div
             className="relative rounded-l-3xl shadow-md 
                        w-full sm:w-[280px] h-[230px] 
-                       mt-4 sm:-mt-5 sm:ml-4 "
+                       mt-16 sm:-mt-5 -left-10 "
             style={{
               background: "linear-gradient(135deg, #80EAF6 0%, #9080E7 100%)",
               borderTopRightRadius: "0px",
@@ -85,7 +85,7 @@ const Impact = () => {
           <div
             className="relative rounded-3xl shadow-md 
                        w-full sm:w-[270px] h-[170px] 
-                       mt-2 sm:-mt-2 sm:ml-4 overflow-hidden"
+                       mt-2 sm:-mt-2 -left-10 overflow-hidden"
             style={{ backgroundColor: "rgba(145, 210, 195, 0.5)" }}
           >
             <img
