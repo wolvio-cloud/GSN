@@ -44,17 +44,17 @@ const ContentSection1 = () => {
 
           {/* Center - Lines (only on lg+) */}
           <div className="hidden lg:flex flex-col items-center relative">
-            {/* Vertical Line */}
-            <div className="w-[2px] h-[18px] bg-gray-300 relative mt-[260px] lg:ml-190">
-              <div className="w-2 h-2 rounded-full  bg-gray-300 absolute -top-1.5 left-1/2 -translate-x-1/2"></div>
-              <div className="w-2 h-2 rounded-full  bg-gray-300 absolute -bottom-1.5 left-1/2 -translate-x-1/2"></div>
-            </div>
+           {/* Vertical Line */}
+<div className="w-[2px] h-[14px] bg-gray-300 relative mt-[260px] lg:ml-190">
+  <div className="w-2 h-2 rounded-full bg-transparent border-2 border-gray-300 absolute -top-2 left-1/2 -translate-x-1/2"></div>
+   <div className="w-2 h-2 rounded-full bg-transparent border-2 border-gray-300 absolute -bottom-2 left-1/2 -translate-x-1/2"></div>
+</div>
 
             {/* Horizontal Line */}
-            <div className="w-[420px] h-[2px] bg-gray-300 relative mt-[120px]">
-              <div className="w-3 h-3 rounded-full bg-gray-300 absolute -left-1.5 -top-1.5"></div>
-              <div className="w-3 h-3 rounded-full bg-gray-300 absolute -right-1.5 -top-1.5"></div>
-            </div>
+<div className="w-[420px] h-[2px] bg-gray-300 relative mt-[120px]">
+  <div className="w-3 h-3 rounded-full border-2 border-gray-300 bg-transparent absolute -left-2.5 -top-1.5"></div>
+  <div className="w-3 h-3 rounded-full border-2 border-gray-300 bg-transparent absolute -right-2.5 -top-1.5"></div>
+</div>
           </div>
 
           {/* Right Column */}

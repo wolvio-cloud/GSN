@@ -31,14 +31,14 @@ const Impact = () => {
           <div
             className="relative rounded-l-3xl shadow-md 
                        w-full sm:w-[280px] h-[230px] 
-                       mt-16 sm:-mt-5 -left-10 "
+                       mt-16 sm:-mt-5 sm:left-2  "
             style={{
               background: "linear-gradient(135deg, #80EAF6 0%, #9080E7 100%)",
               borderTopRightRadius: "0px",
               borderBottomRightRadius: "1.5rem",
             }}
           >
-            <div className="relative z-20 p-4 sm:p-6 max-w-[55%]">
+            <div className="relative z-20 p-8 sm:p-6 max-w-[55%]">
               <h3 className="text-[18px] sm:text-[20px] font-bold text-black">
                 100+
               </h3>
@@ -85,7 +85,7 @@ const Impact = () => {
           <div
             className="relative rounded-3xl shadow-md 
                        w-full sm:w-[270px] h-[170px] 
-                       mt-2 sm:-mt-2 -left-10 overflow-hidden"
+                       mt-2 sm:-mt-2 sm:left-2   overflow-hidden"
             style={{ backgroundColor: "rgba(145, 210, 195, 0.5)" }}
           >
             <img
@@ -125,3 +125,4 @@ const Impact = () => {
 };
 
 export default Impact;
+

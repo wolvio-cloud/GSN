@@ -21,9 +21,9 @@ const TermsHero = () => {
           <div className="w-full flex flex-col lg:flex-row items-center lg:items-center justify-between gap-6 text-center lg:text-left">
             {/* Left title */}
             <h1
-              className="font-ubuntu font-bold text-white lg:ml-[-100px]"
+              className="font-ubuntu font-bold text-white lg:ml-[-50px]"
               style={{
-                fontSize: "clamp(30px, 5.5vw, 50px)",
+                fontSize: "clamp(30px, 5.5vw, 40px)",
                 lineHeight: 1,
               }}
             >
@@ -46,7 +46,7 @@ const TermsHero = () => {
                 style={{
                   color: "#a9a9a9",
                   fontWeight: 500,
-                  fontSize: "clamp(18px, 2.2vw, 25px)",
+                  fontSize: "clamp(18px, 2.2vw, 22px)",
                 }}
               >
                 {updatedStr}

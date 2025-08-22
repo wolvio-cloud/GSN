@@ -20,7 +20,7 @@ const Hero = () => {
       {/* Background Video */}
       <video
         className="absolute top-0 left-0 w-full h-full object-cover"
-        src="/h1main.mp4"
+        src="/hmain.mp4"
         autoPlay
         loop
         muted
@@ -34,7 +34,7 @@ const Hero = () => {
           <span className="inline-block ml-4 h-[70px] overflow-hidden align-middle relative">
             <span
               ref={containerRef}
-              className="inline-block transition-transform duration-700 ease-in-out  -ml-1 -mt-2 will-change-transform"
+              className="inline-block transition-transform duration-700 ease-in-out  -ml-1 -mt-1 will-change-transform"
               style={{
                 transform: `translateY(-${index * 70}px)`
               }}

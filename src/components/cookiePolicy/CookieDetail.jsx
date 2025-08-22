@@ -8,14 +8,14 @@ const CookieDetail = () => {
       style={{ borderRadius: "28px" }}
     >
       {/* Top rounded container */}
-     <div className="bg-[#d2dce4] h-[40px] md:h-[70px] w-full rounded-full mt-10"></div>
+     <div className="bg-[#d2dce4] h-[40px] md:h-[50px] w-full rounded-full mt-10"></div>
       <div className="max-w-[1694px] mx-auto relative">
         {/* Content & Sidebar */}
         <div className="flex flex-col lg:flex-row gap-10 mt-8">
           {/* Left Content */}
           <div className="flex-1">
             {/* Intro Paragraph */}
-            <p className="font-ubuntu font-medium text-[18px] md:text-[21px] leading-[1.4] text-center mb-12 max-w-[900px] mx-auto">
+            <p className="font-ubuntu font-medium text-[18px] md:text-[18px] leading-[1.4] text-center mb-12 max-w-[900px] mx-auto">
               This Cookie Policy explains how{" "}
               <strong>Global Success Network (GSN)</strong> uses cookies and
               similar technologies to provide, improve, and personalize your
@@ -23,16 +23,16 @@ const CookieDetail = () => {
             </p>
 
             {/* Section 1 */}
-            <h2 className="font-ubuntu font-bold text-[24px] mt-6 mb-3">
+            <h2 className="font-ubuntu font-bold text-[22px] mt-6 mb-3">
               1. What Are Cookies?
             </h2>
-            <p className="font-ubuntu text-[20px] leading-[1.6] ">
+            <p className="font-ubuntu text-[18px] leading-[1.6] ">
               Cookies are small text files placed on your device when you visit
               a website. They help improve your experience by remembering your
               preferences, tracking user behavior, and enabling certain
               functionalities of the website.
             </p>
-            <ul className="list-disc ml-6 mb-6 font-ubuntu text-[20px] leading-[1.6]">
+            <ul className="list-disc ml-6 mb-6 font-ubuntu text-[18px] leading-[1.6]">
               <li>Session cookies (deleted when you close your browser)</li>
               <li>
                 Persistent cookies (remain until manually deleted or expired)
@@ -40,10 +40,10 @@ const CookieDetail = () => {
             </ul>
 
             {/* Section 2 */}
-            <h2 className="font-ubuntu font-bold text-[24px] mt-6 mb-3">
+            <h2 className="font-ubuntu font-bold text-[22px] mt-6 mb-3">
               2. Types of Cookies We Use
             </h2>
-            <ul className="list-disc ml-6 mb-6 font-ubuntu text-[20px] leading-[1.6]">
+            <ul className="list-disc ml-6 mb-6 font-ubuntu text-[18px] leading-[1.6]">
               <li>
                 <strong>Essential Cookies:</strong> Required for core website
                 functionality such as navigation, access to secure areas, and
@@ -70,10 +70,10 @@ const CookieDetail = () => {
             </ul>
 
             {/* Section 3 */}
-            <h2 className="font-ubuntu font-bold text-[24px] mt-6 mb-3">
+            <h2 className="font-ubuntu font-bold text-[22px] mt-6 mb-3">
               3. Purpose of Using Cookies
             </h2>
-            <ul className="list-disc ml-6 mb-6 font-ubuntu text-[20px] leading-[1.6]">
+            <ul className="list-disc ml-6 mb-6 font-ubuntu text-[18px] leading-[1.6]">
               <li>Ensure secure and functional navigation</li>
               <li>Analyze site performance and user behavior</li>
               <li>Customize your user experience</li>
@@ -81,7 +81,7 @@ const CookieDetail = () => {
             </ul>
 
             {/* Section 4 */}
-            <h2 className="font-ubuntu font-bold text-[24px] mt-6 mb-3">
+            <h2 className="font-ubuntu font-bold text-[22px] mt-6 mb-3">
               4. Third-Party Cookies
             </h2>
             <p className="font-ubuntu text-[20px] leading-[1.6] ">
@@ -90,7 +90,7 @@ const CookieDetail = () => {
               advertising. These providers may collect data independently in
               accordance with their own privacy policies.
             </p>
-            <ul className="list-disc ml-6 mb-6 font-ubuntu text-[20px] leading-[1.6]">
+            <ul className="list-disc ml-6 mb-6 font-ubuntu text-[18px] leading-[1.6]">
               <li>Google Analytics</li>
               <li>Facebook Pixel</li>
               <li>LinkedIn Insight Tag</li>
@@ -98,45 +98,45 @@ const CookieDetail = () => {
             </ul>
 
             {/* Section 5 */}
-            <h2 className="font-ubuntu font-bold text-[24px] mt-6 mb-3">
+            <h2 className="font-ubuntu font-bold text-[22px] mt-6 mb-3">
               5. Cookie Consent & Management
             </h2>
-            <p className="font-ubuntu text-[20px] leading-[1.6] ">
+            <p className="font-ubuntu text-[18px] leading-[1.6] ">
               When you visit our website for the first time, you will see a
               cookie consent banner asking you to accept or customize your
               cookie preferences.
             </p>
-            <p className="font-ubuntu text-[20px] leading-[1.6] ">
+            <p className="font-ubuntu text-[18px] leading-[1.6] ">
               You can manage or disable cookies by:
             </p>
-            <ul className="list-disc ml-6 font-ubuntu text-[20px] leading-[1.6]">
+            <ul className="list-disc ml-6 font-ubuntu text-[18px] leading-[1.6]">
               <li>Adjusting your browser settings</li>
               <li>Clearing cookies stored on your device</li>
               <li>Using our cookie settings panel (if enabled)</li>
             </ul>
-            <p className="font-ubuntu text-[20px] mb-6">
+            <p className="font-ubuntu text-[18px] mb-6">
               Note: Disabling cookies may limit some features or functionality
               of the site.
             </p>
 
             {/* Section 6 */}
-            <h2 className="font-ubuntu font-bold text-[24px] mt-6 mb-3">
+            <h2 className="font-ubuntu font-bold text-[22px] mt-6 mb-3">
               6. Your Rights
             </h2>
-            <ul className="list-disc ml-6  font-ubuntu text-[20px] leading-[1.6]">
+            <ul className="list-disc ml-6  font-ubuntu text-[18px] leading-[1.6]">
               <li>Consent or refuse non-essential cookies</li>
               <li>Request information about what data is being collected</li>
               <li>Withdraw consent at any time</li>
             </ul>
-            <p className="font-ubuntu text-[20px] mb-6">
+            <p className="font-ubuntu text-[18px] mb-6">
               For more about your rights, please review our Privacy Policy.
             </p>
 
             {/* Section 7 */}
-            <h2 className="font-ubuntu font-bold text-[24px] mt-6 mb-3">
+            <h2 className="font-ubuntu font-bold text-[22px] mt-6 mb-3">
               7. Updates to This Policy
             </h2>
-            <p className="font-ubuntu text-[20px] mb-6">
+            <p className="font-ubuntu text-[18px] mb-6">
               We may update this Cookie Policy to reflect changes in legal
               requirements or technology. Changes will be posted here with a
               revised “Last Updated” date. Continued use of the site implies
@@ -144,14 +144,14 @@ const CookieDetail = () => {
             </p>
 
             {/* section 8*/}
-            <h2 className="font-ubuntu font-bold text-[24px] mt-6 mb-3">
+            <h2 className="font-ubuntu font-bold text-[22px] mt-6 mb-3">
               8. Contact us
             </h2>
-            <p className="font-ubuntu text-[20px] ">
+            <p className="font-ubuntu text-[18px] ">
               If you have questions about this Cookie Policy or how we use your
               data, please contact us at:
             </p>
-            <ul className="list-disc ml-6  font-ubuntu text-[20px] leading-[1.6]">
+            <ul className="list-disc ml-6  font-ubuntu text-[18px] leading-[1.6]">
               <li>
                 {" "}
                 <strong>Email:</strong> info@zenith77.com
@@ -162,7 +162,7 @@ const CookieDetail = () => {
           {/* Right Sidebar */}
           <div className="lg:w-[445px] flex-shrink-0 mt-4 lg:mt-50">
             <div className="sticky lg:top-[100px] top-[10px] bg-[#d2dce4] rounded-[20px] p-6">
-              <h3 className="font-ubuntu font-medium text-[22px] text-black mb-4 text-center">
+              <h3 className="font-ubuntu font-medium text-[20px] text-black mb-4 text-center">
                 LEGAL PAGES
               </h3>
               <div className="bg-white rounded-[14px] p-5 space-y-5">
@@ -172,18 +172,19 @@ const CookieDetail = () => {
                 >
                   Privacy Policy
                 </Link>
+                  <Link
+                  to="/terms-conditions"
+                  className="text-[18px] text-[#777] hover:text-[#153153] cursor-pointer block"
+                >
+                  Terms &amp; Conditions
+                </Link>
                 <Link
                   to="/cookie-policy"
                   className="text-[18px] text-black font-bold hover:text-[#153153] cursor-pointer block"
                 >
                   Cookie Policy
                 </Link>
-                <Link
-                  to="/terms-conditions"
-                  className="text-[18px] text-[#777] hover:text-[#153153] cursor-pointer block"
-                >
-                  Terms &amp; Conditions
-                </Link>
+              
               </div>
             </div>
           </div>
@@ -191,7 +192,7 @@ const CookieDetail = () => {
       </div>
 
       {/* Bottom rounded container */}
-       <div className="bg-[#d2dce4] h-[40px] md:h-[70px] w-full rounded-full mt-10"></div>
+       <div className="bg-[#d2dce4] h-[40px] md:h-[50px] w-full rounded-full mt-10"></div>
     </section>
   );
 };

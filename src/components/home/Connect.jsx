@@ -33,27 +33,23 @@ const Connect = () => {
         if (!nextCard) return;
 
         const cardRect = card.getBoundingClientRect();
-        console.log("cardRect",cardRect);
-        
         const nextRect = nextCard.getBoundingClientRect();
 
-        // Distance between next card's top and current card's top
         const overlap = cardRect.height - (nextRect.top - cardRect.top);
 
         if (overlap > 0) {
-          const start = cardRect.height * 0.2; // 30% point
-          const end = cardRect.height * 1;   // 90% point
+          const start = cardRect.height * 0.2;
+          const end = cardRect.height * 1;
 
           let progress = (overlap - start) / (end - start);
-          progress = Math.min(Math.max(progress, 0), 1); // clamp 0-1
+          progress = Math.min(Math.max(progress, 0), 1);
 
-          const scale = 1 - progress * 0.2; // shrink to 70%
-          const opacity = 1 - progress; // fade out
+          const scale = 1 - progress * 0.2;
+          const opacity = 1 - progress;
 
           card.style.transform = `scale(${scale})`;
           card.style.opacity = opacity;
         } else {
-          // Reset if not overlapped
           card.style.transform = "scale(1)";
           card.style.opacity = "1";
         }
@@ -63,7 +59,7 @@ const Connect = () => {
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-  console.log("ref",cardRefs)
+
   return (
     <section className="relative w-full bg-white py-16 px-6 md:px-16 lg:px-24">
       {/* Heading */}
@@ -79,31 +75,47 @@ const Connect = () => {
       {/* Cards */}
       <div className="relative space-y-8">
         {cards.map((card, i) => {
-          const isReversed = card.index === "02"
+          const isReversed = card.index === "02";
+
+          // 🎯 Curve logic for background + image only
+          const bgCurves =
+            card.index === "02"
+              ? "rounded-tr-[30px] rounded-bl-[30px]"
+              : "rounded-tl-[30px] rounded-br-[30px]";
+
           return (
             <div
               key={i}
               ref={(el) => (cardRefs.current[i] = el)}
               className="sticky top-24 h-[360px] sm:h-[480px] w-full bg-[#324456] rounded-[30px] text-white overflow-hidden p-6 sm:p-10 transition-transform duration-200 ease-out will-change-transform will-change-opacity"
             >
-              {/* Background pattern */}
+              {/* Background pattern with corner curves */}
               <div
-                className={`absolute inset-y-0 ${isReversed ? "left-0" : "right-0"
-                  } mt-8 w-1/2 bg-[#111111] opacity-20 bg-[radial-gradient(white_1px,transparent_1px)] bg-[length:14px_14px]`}
-              ></div>
+  className={`absolute 
+    ${isReversed ? "left-0" : "right-0"} 
+    mt-35 sm:mt-3 
+    w-[70%] sm:w-1/2   // 👈 mobile: 80% width, sm+: 50%
+    h-[260px] sm:h-full
+    bg-[#111111] opacity-20 
+    bg-[radial-gradient(white_1px,transparent_1px)] 
+    bg-[length:14px_14px] ${bgCurves}`}
+></div>
 
-              {/* Image */}
+
+              {/* Image with same corner curves */}
               <img
                 src={card.image}
                 alt={`Connect ${card.index}`}
-                className={`absolute bottom-0 ${isReversed ? "left-0" : "right-0"
-                  } w-[190px] sm:w-[460px] h-[160px] sm:h-[350px] object-contain sm:object-cover`}
+                className={`absolute bottom-0 ${
+                  isReversed ? "left-0" : "right-0"
+                } w-[190px] sm:w-[460px] h-[160px] sm:h-[350px] object-contain sm:object-cover ${bgCurves}`}
               />
 
               {/* Text */}
               <div
-                className={`relative z-10 mt-2 sm:mt-0 max-w-full sm:max-w-[40%] ${isReversed ? "sm:ml-auto sm:text-right" : ""
-                  }`}
+                className={`relative z-10 mt-2 sm:mt-0 max-w-full sm:max-w-[40%] ${
+                  isReversed ? "sm:ml-auto sm:text-right" : ""
+                }`}
               >
                 <h3 className="text-[18px] sm:text-[24px] font-ubuntu font-bold">
                   {card.title}
@@ -115,8 +127,9 @@ const Connect = () => {
 
               {/* Card Number */}
               <span
-                className={`text-[24px] sm:text-[40px] font-playfair absolute bottom-4 sm:bottom-6 ${isReversed ? "right-6 sm:right-10" : "left-6 sm:left-10"
-                  }`}
+                className={`text-[24px] sm:text-[40px] font-playfair absolute bottom-4 sm:bottom-6 ${
+                  isReversed ? "right-6 sm:right-10" : "left-6 sm:left-10"
+                }`}
               >
                 {card.index}
               </span>
