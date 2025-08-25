@@ -28,18 +28,35 @@ const Footer = () => {
           <h3 className="text-[24px] md:text-[30px] font-ubuntu font-bold mb-4">
             Explore
           </h3>
-          <ul className="space-y-2 text-[14px] font-ubuntu">
-            <li className="hover:text-gray-400 cursor-pointer">
-              GSN Experience
+          <ul className="space-y-2 text-[16px] font-ubuntu">
+            <li>
+              <Link
+                to="/experience"
+                className="hover:text-gray-400 cursor-pointer block"
+              >
+                GSN Experience
+              </Link>
             </li>
-            <li className="hover:text-gray-400 cursor-pointer">
-              Global Community
+            <li>
+              <Link
+                to="/community"
+                className="hover:text-gray-400 cursor-pointer block"
+              >
+                Global Community
+              </Link>
             </li>
-            <li className="hover:text-gray-400 cursor-pointer">
-              GSN Franchising
+            <li>
+              <Link
+                to="/franchising"
+                className="hover:text-gray-400 cursor-pointer block"
+              >
+                GSN Franchising
+              </Link>
             </li>
-            <li className="hover:text-gray-400 cursor-pointer">
-              Blogs & Insights
+            <li>
+              <Link to="/" className="hover:text-gray-400 cursor-pointer block">
+                Blogs &amp; Insights
+              </Link>
             </li>
           </ul>
         </div>
@@ -49,9 +66,23 @@ const Footer = () => {
           <h3 className="text-[24px] md:text-[30px] font-ubuntu font-bold mb-4">
             Who We Are
           </h3>
-          <ul className="space-y-2 text-[14px] font-ubuntu">
-            <li className="hover:text-gray-400 cursor-pointer">About Us</li>
-            <li className="hover:text-gray-400 cursor-pointer">Our Vision</li>
+          <ul className="space-y-2 text-[16px] font-ubuntu">
+            <li>
+              <Link
+                to="/about-us"
+                className="hover:text-gray-400 cursor-pointer block"
+              >
+                About Us
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/our-vision"
+                className="hover:text-gray-400 cursor-pointer block"
+              >
+                Our Vision
+              </Link>
+            </li>
           </ul>
         </div>
 

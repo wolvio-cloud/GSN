@@ -63,14 +63,14 @@ const Inspiring = () => {
           </div>
         </div>
 
-        {/* LINE + DOTS Between Card 1 & 2 */}
-        <div className="w-[2px] h-12 bg-[#8d8e91] relative  flex-col items-center md:-mt-16 md:ml-150 hidden md:flex ">
-          <div className="w-3 h-3 rounded-full bg-[#8d8e91] absolute -top-2"></div>
-          <div className="w-3 h-3 rounded-full bg-[#8d8e91] absolute -bottom-1"></div>
-        </div>
+       {/* LINE + DOTS Between Card 1 & 2 */}
+<div className="w-[2px] h-14 bg-[#8d8e91] relative flex-col items-center md:-mt-16 md:ml-150 hidden md:flex">
+  <div className="w-3 h-3 rounded-full border-2 border-[#8d8e91] bg-transparent absolute -top-3"></div>
+  <div className="w-3 h-3 rounded-full border-2 border-[#8d8e91] bg-transparent absolute -bottom-3"></div>
+</div>
 
         {/* CARD 2 */}
-        <div className="relative bg-[#D2DCE4] rounded-3xl p-6 md:p-10 w-full md:w-[500px] min-h-[200px] md:self-end md:-mt-18  ">
+        <div className="relative bg-[#D2DCE4] rounded-3xl p-6 md:p-10 w-full md:w-[500px] min-h-[200px] md:self-end md:-mt-16  ">
           <div className="flex items-start gap-4">
             <img
               src={testimonials[1].image}
@@ -91,14 +91,14 @@ const Inspiring = () => {
           </div>
         </div>
 
-        {/* HORIZONTAL LINE Between Card 2 & 3 */}
-        <div className="h-[2px] w-full max-w-[90px] bg-[#8d8e91] relative  items-center justify-center  md:-mt-50 hidden md:flex">
-          <div className="w-3 h-3 rounded-full bg-[#8d8e91] absolute -left-1"></div>
-          <div className="w-3 h-3 rounded-full bg-[#8d8e91] absolute -right-1"></div>
-        </div>
+       {/* HORIZONTAL LINE Between Card 2 & 3 */}
+<div className="h-[2px] w-full max-w-[70px] bg-[#8d8e91] relative items-center justify-center md:-mt-50 hidden md:flex">
+  <div className="w-3 h-3 rounded-full border-2 border-[#8d8e91] bg-transparent absolute -left-3"></div>
+  <div className="w-3 h-3 rounded-full border-2 border-[#8d8e91] bg-transparent absolute -right-3"></div>
+</div>
 
         {/* CARD 3 */}
-        <div className="relative bg-[#D2DCE4] rounded-3xl p-6 md:p-10 w-full md:w-[500px] min-h-[200px] md:self-start mt-8 md:-top-50">
+        <div className="relative bg-[#D2DCE4] rounded-3xl p-6 md:p-10 w-full md:w-[500px] min-h-[200px] md:self-start mt-0 md:-top-50">
           <div className="flex items-start gap-4">
             <img
               src={testimonials[2].image}

@@ -55,12 +55,13 @@ const Gsnexp = () => {
           </div>
         </div>
 
-        {/* Vertical line + dots between Card 1 & 2 */}
-        <div className="hidden md:flex flex-col items-center md:-mt-20 md:ml-150">
-          <div className="w-3 h-3 bg-[#8d8e91] rounded-full mt-1" />
-          <div className="w-[2px] h-12 bg-[#8d8e91]" />
-          <div className="w-3 h-3 bg-[#8d8e91] rounded-full mb-1 " />
-        </div>
+        {/* Vertical line + hollow dots between Card 1 & 2 */}
+<div className="hidden md:flex flex-col items-center md:-mt-20 md:ml-150">
+  <div className="w-3 h-3 rounded-full border-2 border-[#8d8e91] bg-transparent mt-1" />
+  <div className="w-[2px] h-12 bg-[#8d8e91]" />
+  <div className="w-3 h-3 rounded-full border-2 border-[#8d8e91] bg-transparent mb-1" />
+</div>
+
 
         {/* Card 2 */}
         <div className="flex flex-col md:flex-row items-center bg-[#D2DCE4] rounded-[30px] w-full md:w-[500px] min-h-[200px] md:self-end p-6 md:p-10 gap-6 md:-mt-20">
@@ -79,14 +80,15 @@ const Gsnexp = () => {
           </div>
         </div>
 
-        {/* Horizontal line + dots between Card 2 & 3 */}
-        <div className="hidden md:flex items-center justify-center w-[125px] h-[2px] bg-[#8d8e91] relative -mt-14 md:-mt-50 -ml-10 ">
-          <div className="w-3 h-3 bg-[#8d8e91] rounded-full absolute -left-1" />
-          <div className="w-3 h-3 bg-[#8d8e91] rounded-full absolute -right-1" />
-        </div>
+       {/* Horizontal line + dots between Card 2 & 3 */}
+<div className="hidden md:flex items-center justify-center w-[115px] h-[2px] bg-[#8d8e91] relative -mt-14 md:-mt-50 -ml-10">
+  <div className="w-3 h-3 rounded-full border-2 border-[#8d8e91] bg-transparent absolute -left-3" />
+  <div className="w-3 h-3 rounded-full border-2 border-[#8d8e91] bg-transparent absolute -right-3" />
+</div>
+
 
         {/* Card 3 */}
-        <div className="flex flex-col md:flex-row items-center bg-[#D2DCE4] rounded-[30px] w-full md:w-[500px] min-h-[200px] md:self-start p-6 md:p-10 gap-6 mt-8 md:-mt-59 md:-ml-10">
+        <div className="flex flex-col md:flex-row items-center bg-[#D2DCE4] rounded-[30px] w-full md:w-[500px] min-h-[200px] md:self-start p-6 md:p-10 gap-6 mt-0 md:-mt-59 md:-ml-10">
           <img
             src={gsnCards[2].image}
             alt={gsnCards[2].title}

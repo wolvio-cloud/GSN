@@ -6,7 +6,7 @@ const Heroexp = () => {
       {/* Background Video */}
       <video
   className="absolute top-0 left-0 w-full h-full object-cover"
-  src="/experience/hexp.mp4"
+  src="/experience/h1exp.mp4"
   autoPlay
   loop
   muted
@@ -19,14 +19,12 @@ const Heroexp = () => {
         <h1 className="text-white font-playfair font-semibold text-[38px] sm:text-[50px] md:text-[65px] lg:text-[65px] leading-tight">
           Referrals That Truly Resonate
         </h1>
-        <p className="text-white font-ubuntu text-[16px] sm:text-[20px] md:text-[26px] lg:text-[24px] mt-4">
+        <p className="text-white font-ubuntu text-[18px] sm:text-[22px] md:text-[26px] lg:text-[24px] mt-6">
           Elevate Your Business Through Meaningful Connections
         </p>
       </div>
 
-      {/* Optional: Gradient Overlay for readability
-      <div className="absolute inset-0 bg-black bg-opacity-30"></div> */}
-    </section>
+          </section>
   );
 };
 

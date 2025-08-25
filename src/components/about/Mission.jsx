@@ -23,7 +23,7 @@ const Mission = () => {
               <h2
                 className="font-ubuntu font-bold text-[#153153] mb-8"
                 style={{
-                  fontSize: "clamp(36px, 4.5vw, 50px)",
+                  fontSize: "clamp(36px, 4.5vw, 40px)",
                   lineHeight: 1.05,
                 }}
               >
@@ -33,7 +33,7 @@ const Mission = () => {
               <p
                 className="text-black font-ubuntu mb-6"
                 style={{
-                  fontSize: "clamp(18px, 2vw, 22px)",
+                  fontSize: "clamp(18px, 2vw, 20px)",
                   lineHeight: 1.6,
                 }}
               >
@@ -46,7 +46,7 @@ const Mission = () => {
               <p
                 className="text-black font-ubuntu"
                 style={{
-                  fontSize: "clamp(18px, 2vw, 22px)",
+                  fontSize: "clamp(18px, 2vw, 20px)",
                   lineHeight: 1.6,
                 }}
               >

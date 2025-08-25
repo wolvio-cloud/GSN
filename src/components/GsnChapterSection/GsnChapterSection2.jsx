@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const GsnChapterSection2 = () => {
   return (
@@ -12,9 +13,14 @@ const GsnChapterSection2 = () => {
           region with the tools, support, and vision of GSN
         </p>
         <div className="mt-8">
-          <button className="bg-[#FFE982] text-black font-semibold px-6 py-3 rounded-full hover:bg-yellow-300 transition duration-300">
+          {/* ✅ Updated CTA */}
+          <Link
+            to="/"
+            state={{ scrollTo: "contact" }}
+            className="bg-[#FFE982] text-black font-semibold px-6 py-3 rounded-full hover:bg-yellow-300 transition duration-300"
+          >
             Get Invited
-          </button>
+          </Link>
         </div>
       </div>
     </section>
