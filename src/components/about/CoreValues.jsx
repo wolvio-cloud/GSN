@@ -1,4 +1,3 @@
-
 import React from "react";
 
 const topCards = [
@@ -91,8 +90,8 @@ const CoreValues = () => {
 
           <div className="lg:w-1/3 flex flex-col items-end">
             <p className="text-right text-[18px]  md:text-[24px] md:mt-20 text-[#183466] font-ubuntu font-bold">
-              we’re <span className="font-extrabold">reimagining</span> how the world
-              grows together
+              we’re <span className="font-extrabold">reimagining</span> how the
+              world grows together
             </p>
           </div>
         </div>
@@ -101,9 +100,11 @@ const CoreValues = () => {
         <div className="mt-12">
           {/* MOBILE: stacked in numeric order */}
           <div className="flex flex-col gap-6 lg:hidden">
-            {[...topCards, ...bottomCards].map((card) => (
-              <Card key={card.number} {...card} />
-            ))}
+            {[...topCards, ...bottomCards]
+              .sort((a, b) => Number(a.number) - Number(b.number))
+              .map((card) => (
+                <Card key={card.number} {...card} />
+              ))}
           </div>
 
           {/* DESKTOP: two rows with connectors */}
@@ -123,7 +124,9 @@ const CoreValues = () => {
               {bottomCards.map((c, idx) => (
                 <React.Fragment key={c.number}>
                   <Card {...c} />
-                  {idx !== bottomCards.length - 1 && <Connector width={50} />}
+                  {idx !== bottomCards.length - 1 && (
+                    <Connector width={50} />
+                  )}
                 </React.Fragment>
               ))}
             </div>
