@@ -33,8 +33,8 @@ const Connect = () => {
         if (!nextCard) return;
 
         const cardRect = card.getBoundingClientRect();
-        console.log("cardRect",cardRect);
-        
+        //console.log("cardRect", cardRect);
+
         const nextRect = nextCard.getBoundingClientRect();
 
         // Distance between next card's top and current card's top
@@ -42,7 +42,7 @@ const Connect = () => {
 
         if (overlap > 0) {
           const start = cardRect.height * 0.2; // 30% point
-          const end = cardRect.height * 1;   // 90% point
+          const end = cardRect.height * 0.9;   // 90% point
 
           let progress = (overlap - start) / (end - start);
           progress = Math.min(Math.max(progress, 0), 1); // clamp 0-1
@@ -63,7 +63,7 @@ const Connect = () => {
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-  console.log("ref",cardRefs)
+  //console.log("ref", cardRefs)
   return (
     <section className="relative w-full bg-white py-16 px-6 md:px-16 lg:px-24">
       {/* Heading */}
