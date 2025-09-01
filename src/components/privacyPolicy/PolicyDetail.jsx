@@ -8,16 +8,12 @@ const PrivacyPolicy = () => {
       style={{ borderRadius: "28px" }}
     >
       {/* Top rounded container */}
-      <div className="bg-[#d2dce4] h-[40px] md:h-[50px] w-full rounded-full"></div>
+      <div className="bg-[#d2dce4] h-[40px] md:h-[50px] w-full rounded-full  md:mt-2"></div>
 
       <div className="max-w-[1694px] mx-auto relative">
-        {/* Content & Sidebar */}
-        <div className="flex flex-col lg:flex-row gap-10 mt-8">
-          {/* Left Content */}
-         <div className="flex-1 ">
-            {/* Intro Paragraph */}
+        {/* Intro Paragraph */}
             <p
-              className="font-ubuntu  font-medium text-[18px] md:text-[18px] leading-[1.4] text-center mb-12 max-w-[900px] mx-auto "
+              className="font-ubuntu  font-medium text-[18px] md:text-[18px] leading-[1.4] text-center mb-12 max-w-[900px] mx-auto mt-10 md:mt-10 "
             >
               At <strong>Global Success Network (GSN)</strong>, we are committed
               to protecting your privacy and ensuring transparency in how we
@@ -26,6 +22,11 @@ const PrivacyPolicy = () => {
               we collect it, your rights, and how we keep your information
               secure.
             </p>
+        {/* Content & Sidebar */}
+        <div className="flex flex-col lg:flex-row gap-10 mt-8 ">
+          {/* Left Content */}
+         <div className="flex-1  max-w-[900px] mx-auto lg:mx-0 md:-mt-2 -mt-12">
+            
 
             {/* Section 1 */}
             <h2 className="font-ubuntu font-bold text-[22px] mt-25 mb-3">
@@ -308,7 +309,7 @@ const PrivacyPolicy = () => {
          
           {/* Right Sidebar */}
 {/* Right Sidebar */}
-<div className="lg:w-[430px] flex-shrink-0 mt-4 lg:mt-50">
+<div className="lg:w-[350px] flex-shrink-1 mt-4 lg:mt-50">
   
     <div className="sticky lg:top-[100px] top-[10px] bg-[#d2dce4] rounded-[20px] p-6">
       <h3 className="font-ubuntu font-medium text-[20px] md:text-[20px] text-black mb-4 text-center">

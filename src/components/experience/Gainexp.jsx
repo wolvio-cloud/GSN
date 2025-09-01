@@ -5,42 +5,42 @@ const Gainexp = () => {
     {
       title: "Purpose-Driven Networking",
       desc: "Engage in relationships built on trust, values, and spiritual alignment — not just transactions",
-      image: "/experience/gaincard/c1.png",
+      image: "/experience/gaincard/c1.webp",
     },
     {
       title: "Global Business Exposure",
       desc: "Showcase your services to a growing international network across multiple industries and countries",
-      image: "/experience/gaincard/c2.png",
+      image: "/experience/gaincard/c2.webp",
     },
     {
       title: "Referral-Focused Growth",
       desc: "Access a high-trust referral system that helps you attract clients who already believe in your value.",
-      image: "/experience/gaincard/c3.png",
+      image: "/experience/gaincard/c3.webp",
     },
     {
       title: "Weekly Networking Circles",
       desc: "Attend powerful sessions where members exchange ideas, opportunities, and support consistently.",
-      image: "/experience/gaincard/c4.png",
+      image: "/experience/gaincard/c4.webp",
     },
     {
       title: "Exclusive Learning Resources",
       desc: "Get access to workshops, insights, and tools to sharpen your business, tech, and communication skills.",
-      image: "/experience/gaincard/c5.png",
+      image: "/experience/gaincard/c5.webp",
     },
     {
       title: "AI-Powered Matchmaking",
       desc: "Smart technology connects you with the most relevant professionals for meaningful collaboration and referrals.",
-      image: "/experience/gaincard/c6.png",
+      image: "/experience/gaincard/c6.webp",
     },
     {
       title: "Supportive Community",
       desc: "Be part of a collective that celebrates collaboration over competition and thrives on shared success",
-      image: "/experience/gaincard/c7.png",
+      image: "/experience/gaincard/c7.webp",
     },
     {
       title: "Leadership Development",
       desc: "Grow not just professionally, but personally — with mindfulness-driven leadership and growth sessions.",
-      image: "/experience/gaincard/c8.png",
+      image: "/experience/gaincard/c8.webp",
     },
   ];
 

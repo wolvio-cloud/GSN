@@ -1,3 +1,4 @@
+
 import React from "react";
 import { Link } from "react-router-dom";
 
@@ -8,20 +9,22 @@ const CookieDetail = () => {
       style={{ borderRadius: "28px" }}
     >
       {/* Top rounded container */}
-     <div className="bg-[#d2dce4] h-[40px] md:h-[50px] w-full rounded-full mt-10"></div>
+      <div className="bg-[#d2dce4] h-[40px] md:h-[50px] w-full rounded-full md:mt-2"></div>
+
       <div className="max-w-[1694px] mx-auto relative">
+        {/* Intro Paragraph - FULL WIDTH */}
+        <p className="font-ubuntu font-medium text-[18px] md:text-[18px] leading-[1.4] text-center mb-12 max-w-[1000px] mx-auto mt-10 md:mt-20">
+          This Cookie Policy explains how{" "}
+          <strong>Global Success Network (GSN)</strong> uses cookies and similar
+          technologies to provide, improve, and personalize your experience on
+          our website. By continuing to use our site, you consent to the use of
+          cookies as described in this policy.
+        </p>
+
         {/* Content & Sidebar */}
         <div className="flex flex-col lg:flex-row gap-10 mt-8">
           {/* Left Content */}
-          <div className="flex-1">
-            {/* Intro Paragraph */}
-            <p className="font-ubuntu font-medium text-[18px] md:text-[18px] leading-[1.4] text-center mb-12 max-w-[900px] mx-auto">
-              This Cookie Policy explains how{" "}
-              <strong>Global Success Network (GSN)</strong> uses cookies and
-              similar technologies to provide, improve, and personalize your
-              experience on our website.
-            </p>
-
+          <div className="flex-1 max-w-[900px] mx-auto lg:mx-0">
             {/* Section 1 */}
             <h2 className="font-ubuntu font-bold text-[22px] mt-6 mb-3">
               1. What Are Cookies?
@@ -160,7 +163,7 @@ const CookieDetail = () => {
           </div>
 
           {/* Right Sidebar */}
-          <div className="lg:w-[445px] flex-shrink-0 mt-4 lg:mt-50">
+          <div className="lg:w-[350px] flex-shrink-1 mt-4 lg:mt-50">
             <div className="sticky lg:top-[100px] top-[10px] bg-[#d2dce4] rounded-[20px] p-6">
               <h3 className="font-ubuntu font-medium text-[20px] text-black mb-4 text-center">
                 LEGAL PAGES
@@ -172,7 +175,7 @@ const CookieDetail = () => {
                 >
                   Privacy Policy
                 </Link>
-                  <Link
+                <Link
                   to="/terms-conditions"
                   className="text-[18px] text-[#777] hover:text-[#153153] cursor-pointer block"
                 >
@@ -184,7 +187,6 @@ const CookieDetail = () => {
                 >
                   Cookie Policy
                 </Link>
-              
               </div>
             </div>
           </div>
@@ -192,7 +194,7 @@ const CookieDetail = () => {
       </div>
 
       {/* Bottom rounded container */}
-       <div className="bg-[#d2dce4] h-[40px] md:h-[50px] w-full rounded-full mt-10"></div>
+      <div className="bg-[#d2dce4] h-[40px] md:h-[50px] w-full rounded-full mt-10"></div>
     </section>
   );
 };

@@ -31,7 +31,7 @@ const AboutUs = () => {
       {/* Bottom Row */}
       <div className="-mt-2 flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
         {/* Card 1 */}
-        <div className="relative bg-[#D2DCE4] rounded-[20px] p-6  max-w-[551px]  min-h-[305px] mt-10">
+        <div className="relative bg-[#D2DCE4] rounded-[20px] p-6  md:w-[500px]  md:h-[250px] mt-10">
           <h3 className="text-[#183466] font-ubuntu font-bold text-[28px] md:text-[32px] lg:text-[24px]">
             Grow Together
           </h3>
@@ -48,7 +48,7 @@ const AboutUs = () => {
         </div>
 
         {/* Card 2 */}
-        <div className="bg-[#D2DCE4] rounded-[20px] p-8   max-w-[551px] h-auto min-h-[300px] md:mt-10">
+        <div className="bg-[#D2DCE4] rounded-[20px] p-8   md:w-[500px] h-auto md:h-[250px] md:mt-10">
           <h3 className="text-[#183466] font-ubuntu font-bold text-[28px] md:text-[32px] lg:text-[24px]">
             Win Together
           </h3>
@@ -60,9 +60,9 @@ const AboutUs = () => {
 
         {/* Image */}
         <img
-          src="/about/a12.PNG"
+          src="/about/a12.webp"
           alt="About GSN"
-          className="rounded-[20px] w-full max-w-[550px] h-[590px] md:h-[550px] lg:h-[590px] object-cover  lg:-mt-30"
+          className="rounded-[20px] w-full md:w-[500px] h-[590px] md:h-[550px] lg:h-[590px] object-cover  lg:-mt-30"
         />
       </div>
     </section>

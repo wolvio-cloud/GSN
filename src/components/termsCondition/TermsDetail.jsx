@@ -8,15 +8,11 @@ const TermsDetail = () => {
       style={{ borderRadius: "28px" }}
     >
       {/* Top rounded container */}
-      <div className="bg-[#d2dce4] h-[40px] md:h-[50px] w-full rounded-full mt-10"></div>
+      <div className="bg-[#d2dce4] h-[40px] md:h-[50px] w-full rounded-full md:mt-2"></div>
 
       <div className="max-w-[1694px] mx-auto relative">
-        {/* Content & Sidebar */}
-        <div className="flex flex-col lg:flex-row gap-10 mt-8">
-          {/* Left Content */}
-          <div className="flex-1">
-            {/* Intro Paragraph */}
-            <p className="font-ubuntu font-medium text-[18px] md:text-[18px] leading-[1.4] text-center mb-12 max-w-[900px] px:4 md:px-2 mx-aut ">
+        {/* Intro Paragraph */}
+            <p className="font-ubuntu font-medium text-[18px] md:text-[18px] leading-[1.4] text-center mb-12 max-w-[900px] px:4 md:px-2 mx-auto mt-10 md:mt-16">
               Welcome to <strong>Global Success Network (GSN)</strong>. These
               Terms and Conditions (“Terms”) govern your access to and use of
               our website, services, content, features, and membership
@@ -24,6 +20,11 @@ const TermsDetail = () => {
               abide by these Terms. If you do not agree, please do not use our
               services.
             </p>
+        {/* Content & Sidebar */}
+             <div className="flex flex-col lg:flex-row gap-10 mt-8">
+          {/* Left Content */}
+          <div className="flex-1 max-w-[900px] mx-auto lg:mx-0">
+           
 
             {/* Section 1 */}
             <h2 className="font-ubuntu font-bold text-[22px] mt-6 mb-3">
@@ -194,7 +195,7 @@ const TermsDetail = () => {
           </div>
 
           {/* Right Sidebar */}
-          <div className="lg:w-[445px] flex-shrink-0 mt-4 lg:mt-50">
+          <div className="lg:w-[350px] flex-shrink-1 mt-4 lg:mt-50">
             <div className=" sticky lg:top-[100px] top-[10px] bg-[#d2dce4] rounded-[20px] p-6">
               <h3 className="font-ubuntu font-medium text-[20px] text-black mb-4 text-center">
                 LEGAL PAGES

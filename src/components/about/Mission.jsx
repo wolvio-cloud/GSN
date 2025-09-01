@@ -19,18 +19,21 @@ const Mission = () => {
 
         {/* Outer container with border + rounded corners */}
         <div className="relative bg-white border border-gray-200 rounded-[28px] p-6 md:p-10 overflow-visible">
-          <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,520px)_1fr] gap-6 lg:gap-10 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,520px)_5fr] gap-6 lg:gap-10 items-start">
             {/* LEFT - Image */}
             {/* LEFT - Image */}
-            <div className="relative flex justify-center z-20 w-full">
-              <img
-                src="/about/mission.png"
-                alt="Mission visual"
-                className="rounded-[20px] w-full object-cover -mb-8 sm:-mb-12 md:-mb-20 lg:-mb-28"
-                style={{ minHeight: "320px", maxHeight: "720px" }}
-              />
-
-            </div>
+           <div className="relative flex justify-center z-20 w-full">
+  <img
+    src="/about/mission.webp"
+    alt="Mission visual"
+    className="
+      rounded-[20px] 
+      w-full object-cover 
+      -mb-8 sm:-mb-12 md:-mb-20 lg:-mb-28 
+      min-h-[320px] md:min-h-[480px] lg:min-h-[600px] 
+    "
+  />
+</div>
 
             {/* RIGHT - Text */}
             <div className="relative z-20 flex flex-col justify-start mt-4 sm:mt-0">

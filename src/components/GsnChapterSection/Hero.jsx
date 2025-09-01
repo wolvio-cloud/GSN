@@ -6,7 +6,7 @@ const Hero = () => {
             {/* Background Image */}
             <img
                 className="absolute top-0 left-0 w-full h-full object-cover"
-                src="/franchsing/bg.jpg"
+                src="/franchsing/bg.webp"
                 alt="Background"
             />
 

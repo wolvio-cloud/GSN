@@ -43,7 +43,7 @@ const bottomCards = [
 ];
 
 /* Connector with hollow dots */
-const Connector = ({ width = 64 }) => (
+const Connector = ({ width = 60 }) => (
   <div className="hidden lg:flex items-center justify-center" style={{ width }}>
     <div className="relative w-full h-1 bg-gray-300 rounded-full">
       <div className="absolute left-0 top-1/2 -translate-y-1/2 w-3 h-3 rounded-full border-2 border-gray-400 bg-white"></div>
@@ -107,30 +107,30 @@ const CoreValues = () => {
               ))}
           </div>
 
-          {/* DESKTOP: two rows with connectors */}
-          <div className="hidden lg:block">
-            {/* Top row (right-aligned) */}
-            <div className="flex items-center justify-end gap-0">
-              <Card {...topCards[0]} />
-              <Connector width={50} />
-              <Card {...topCards[1]} />
-            </div>
+        <div className="hidden lg:block">
+  {/* Top row */}
+  <div className="flex items-center justify-end gap-0 md:-mr-14">
+    <div className="h-[300px]"><Card {...topCards[0]} /></div>
+    <Connector width={40} />
+    <div className="h-[300px]"><Card {...topCards[1]} /></div>
+  </div>
 
-            {/* reduced gap between rows */}
-            <div className="h-8" />
+  <div className="h-8" />
 
-            {/* Bottom row */}
-            <div className="flex items-center gap-0">
-              {bottomCards.map((c, idx) => (
-                <React.Fragment key={c.number}>
-                  <Card {...c} />
-                  {idx !== bottomCards.length - 1 && (
-                    <Connector width={50} />
-                  )}
-                </React.Fragment>
-              ))}
-            </div>
-          </div>
+  {/* Bottom row */}
+<div className="flex items-center gap-4 md:-ml-10">
+  {bottomCards.map((c, idx) => (
+    <React.Fragment key={c.number}>
+      <div className="h-[300px]">
+        <Card {...c} />
+      </div>
+      {idx !== bottomCards.length - 1 && (
+        <Connector width={140} />  
+      )}
+    </React.Fragment>
+  ))}
+</div>
+</div>
         </div>
       </div>
     </section>

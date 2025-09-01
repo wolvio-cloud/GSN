@@ -5,19 +5,19 @@ const gsnCards = [
     title: "GSN In-Person Circles",
     description:
       "Experience the power of face-to-face connection. Build deeper relationships through intentional, local meetups.",
-    image: "/experience/gsnexp/e1.png", // adjust your path accordingly
+    image: "/experience/gsnexp/e1.webp", // adjust your path accordingly
   },
   {
     title: "GSN Hybrid Sessions",
     description:
       "The perfect balance. Meet in person once a month, and continue connecting online — flexible, consistent, and powerful.",
-    image: "/experience/gsnexp/e2.png",
+    image: "/experience/gsnexp/e2.webp",
   },
   {
     title: "GSN Virtual Connect",
     description:
       "Join from anywhere. Enjoy the full GSN experience with global members right from your home or workspace.",
-    image: "/experience/gsnexp/e3.png",
+    image: "/experience/gsnexp/e3.webp",
   },
 ];
 
