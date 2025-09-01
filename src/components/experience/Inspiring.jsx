@@ -98,7 +98,7 @@ const Inspiring = () => {
 </div>
 
         {/* CARD 3 */}
-        <div className="relative bg-[#D2DCE4] rounded-3xl p-6 md:p-10 w-full md:w-[500px] min-h-[200px] md:self-start mt-0 md:-top-50">
+        <div className="relative bg-[#D2DCE4] rounded-3xl p-6 md:p-10 w-full md:w-[500px] min-h-[200px] md:self-start mt-0 md:-top-42">
           <div className="flex items-start gap-4">
             <img
               src={testimonials[2].image}

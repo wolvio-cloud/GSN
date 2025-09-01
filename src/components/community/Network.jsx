@@ -55,7 +55,7 @@ const Network = () => {
       </div>
 
       {/* Bottom Note */}
-     <p className="mt-10 text-left text-black text-[16px] sm:text-[18px] md:text-[18px] font-ubuntu italic max-w-5xl  px-2 leading-relaxed">
+     <p className="mt-25 text-left text-black text-[16px] sm:text-[18px] md:text-[18px] font-ubuntu italic max-w-5xl  px-2 leading-relaxed">
   If your country isn’t listed yet, reach out to us to explore opportunities for launching a <span className="font-bold">GSN</span> chapter in your region.
 </p>
 

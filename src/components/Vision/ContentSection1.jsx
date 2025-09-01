@@ -24,7 +24,7 @@ const ContentSection1 = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
           {/* Left Column */}
-          <div className="flex flex-col justify-start space-y-8 h-full  ">
+          <div className="flex flex-col justify-start space-y-10 h-full w-full md:w-[120%]  ">
             <div className="md:ml-6  lg:ml-15">
               <h1 className="text-2xl sm:text-2xl font-bold text-[#153153] leading-tight">
                 A New Era of Networking
@@ -36,7 +36,7 @@ const ContentSection1 = () => {
               </p>
             </div>
 
-            <div className="bg-[#D2DCE4] rounded-3xl p-6 sm:p-8 h-full mt-6 md:mt-10 md:ml-6 lg:ml-10">
+            <div className="bg-[#D2DCE4] rounded-3xl p-6 sm:p-8 h-full mt-6 md:mt-4 md:ml-6 lg:ml-10 ">
               <h3 className="text-2xl font-bold text-[#153153]">{features1[0].title}</h3>
               <p className="text-[#153153] mt-4">{features1[0].description}</p>
             </div>
@@ -45,20 +45,20 @@ const ContentSection1 = () => {
           {/* Center - Lines (only on lg+) */}
           <div className="hidden lg:flex flex-col items-center relative">
            {/* Vertical Line */}
-<div className="w-[2px] h-[14px] bg-gray-300 relative mt-[260px] lg:ml-190">
-  <div className="w-2 h-2 rounded-full bg-transparent border-2 border-gray-300 absolute -top-2 left-1/2 -translate-x-1/2"></div>
-   <div className="w-2 h-2 rounded-full bg-transparent border-2 border-gray-300 absolute -bottom-2 left-1/2 -translate-x-1/2"></div>
+<div className="w-[2px] h-[36px] bg-gray-300 relative mt-[200px] lg:ml-190">
+  <div className="w-3 h-3 rounded-full bg-transparent border-2 border-gray-300 absolute -top-2.5 left-1/2 -translate-x-1/2"></div>
+   <div className="w-3 h-3 rounded-full bg-transparent border-2 border-gray-300 absolute -bottom-2.5 left-1/2 -translate-x-1/2"></div>
 </div>
 
             {/* Horizontal Line */}
-<div className="w-[420px] h-[2px] bg-gray-300 relative mt-[120px]">
+<div className="w-[270px] h-[2px] bg-gray-300 relative md:mt-[110px] ml-6">
   <div className="w-3 h-3 rounded-full border-2 border-gray-300 bg-transparent absolute -left-2.5 -top-1.5"></div>
   <div className="w-3 h-3 rounded-full border-2 border-gray-300 bg-transparent absolute -right-2.5 -top-1.5"></div>
 </div>
           </div>
 
           {/* Right Column */}
-          <div className="flex flex-col justify-start space-y-8 h-full">
+          <div className="flex flex-col justify-start space-y-16 h-full md:h-[200px]  w-full md:w-[120%] md:-ml-10 lg:-ml-12">
             <div className="bg-[#D2DCE4] rounded-3xl p-6 sm:p-8 h-full md:mr-6 lg:mr-8">
               <h3 className="text-2xl font-bold text-[#153153]">{features1[1].title}</h3>
               <p className="text-[#153153] mt-4">{features1[1].description}</p>

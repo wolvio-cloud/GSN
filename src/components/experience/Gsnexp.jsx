@@ -25,7 +25,7 @@ const Gsnexp = () => {
   return (
     <section className="bg-white py-10 px-4 md:px-20">
       {/* Heading */}
-      <div className="text-left md:w-[400px] mb-10 md:ml-8 justify-center">
+      <div className="text-left md:w-[400px] mb-10 md:ml-7 justify-center">
         <h2 className="text-[#153153] text-[28px] md:text-[35px] font-ubuntu font-bold leading-snug">
           Choose Your GSN Experience
         </h2>
@@ -64,7 +64,7 @@ const Gsnexp = () => {
 
 
         {/* Card 2 */}
-        <div className="flex flex-col md:flex-row items-center bg-[#D2DCE4] rounded-[30px] w-full md:w-[500px] min-h-[200px] md:self-end p-6 md:p-10 gap-6 md:-mt-20">
+        <div className="flex flex-col md:flex-row items-center bg-[#D2DCE4] rounded-[30px] w-full md:w-[500px] min-h-[200px] md:self-end p-6 md:p-10 gap-6 md:-mr-2 md:-mt-20">
           <img
             src={gsnCards[1].image}
             alt={gsnCards[1].title}
@@ -81,14 +81,14 @@ const Gsnexp = () => {
         </div>
 
        {/* Horizontal line + dots between Card 2 & 3 */}
-<div className="hidden md:flex items-center justify-center w-[115px] h-[2px] bg-[#8d8e91] relative -mt-14 md:-mt-50 -ml-10">
+<div className="hidden md:flex items-center justify-center w-[55px] h-[2px] bg-[#8d8e91] relative -mt-12 md:-mt-55 ml-8">
   <div className="w-3 h-3 rounded-full border-2 border-[#8d8e91] bg-transparent absolute -left-3" />
   <div className="w-3 h-3 rounded-full border-2 border-[#8d8e91] bg-transparent absolute -right-3" />
 </div>
 
 
         {/* Card 3 */}
-        <div className="flex flex-col md:flex-row items-center bg-[#D2DCE4] rounded-[30px] w-full md:w-[500px] min-h-[200px] md:self-start p-6 md:p-10 gap-6 mt-0 md:-mt-59 md:-ml-10">
+        <div className="flex flex-col md:flex-row items-center bg-[#D2DCE4] rounded-[30px] w-full md:w-[500px] min-h-[200px] md:self-start p-6 md:p-10 gap-6 mt-0 md:-mt-53 md:ml-6">
           <img
             src={gsnCards[2].image}
             alt={gsnCards[2].title}

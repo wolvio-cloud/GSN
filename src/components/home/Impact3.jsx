@@ -6,16 +6,16 @@ const Impact = () => {
     <section className="relative w-full py-20 px-6 md:px-16 lg:px-24 bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         {/* ✅ Left Side - Cards Grid */}
-        <div className="grid grid-cols-2 gap-6 auto-rows-[200px]">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:gap-6 gap-12 auto-rows-[250px] sm:auto-rows-[200px]">
           {/* Card 1 */}
           <div
             className="rounded-3xl p-4 shadow-md flex flex-col justify-between 
-                       w-full h-full"
+                       md:w-full md:h-[150px] mt-12 "
             style={{ backgroundColor: "rgba(240, 230, 140, 0.5)" }}
           >
             <div>
-              <h3 className="text-xl font-bold text-black">150K+</h3>
-              <p className="text-[15px] text-black mt-1">
+              <h3 className=" text-xl md:text-[20px] text-[20px] font-bold text-black">150K+</h3>
+              <p className="md:text-[15px] text-[20px] text-black mt-1">
                 Growth-Oriented Members
               </p>
             </div>
@@ -26,7 +26,7 @@ const Impact = () => {
 
           {/* Card 2 */}
           <div
-            className="relative rounded-l-3xl shadow-md w-full h-full"
+            className="relative rounded-l-3xl shadow-md md:w-[full] md:h-[200px]  "
             style={{
               background: "linear-gradient(135deg, #80EAF6 0%, #9080E7 100%)",
               borderTopRightRadius: "0px",
@@ -34,55 +34,56 @@ const Impact = () => {
             }}
           >
             <div className="relative z-20 p-6 max-w-[60%]">
-              <h3 className="text-[20px] font-bold text-black">100+</h3>
-              <p className="text-[15px] text-black mt-1">
+              <h3 className="md:text-[20px]  text-[20px] font-bold text-black">100+</h3>
+              <p className="text-[20px] md:text-[15px] text-black mt-1">
                 Businesses Represented
               </p>
             </div>
             <img
               src="/suit.png"
               alt="Business"
-              className="absolute bottom-[20px] right-[-80px] scale-[1.2] z-10 object-contain pointer-events-none"
+              className="absolute md:bottom-[24px] bottom-[16px] md:right-[-90px]  right-[-120px] md:scale-[1.3] scale-[1.1] z-10 object-contain pointer-events-none"
             />
           </div>
 
           {/* Card 3 */}
           <div
-            className="relative rounded-r-3xl shadow-md w-full h-full"
+            className="relative rounded-r-3xl shadow-md  md:w-full md:h-[200px] "
             style={{
               background: "linear-gradient(135deg, #F9C7E5 0%, #A0E9E1 100%)",
               borderTopLeftRadius: "0px",
               borderBottomLeftRadius: "1.5rem",
             }}
           >
-            <div className="relative z-10 p-6 max-w-[75%]">
-              <h3 className="text-[18px] font-bold text-black leading-snug">
+            <div className="relative z-10 p-6 max-w-[95%]">
+              <h3 className="md:text-[20px] text-[20px]  font-bold text-black leading-snug">
                 AI-Driven Smart Matchmaking
               </h3>
-              <p className="text-[14px] text-black mt-2 leading-snug">
+              <p className="text-[18px] md:text-[14px] text-black mt-2 leading-snug">
                 Helping members connect meaningfully and grow faster
               </p>
             </div>
             <img
               src="/graph.png"
               alt="Smart Matchmaking"
-              className="absolute bottom-3 right-6 h-[65px] object-contain"
+              className="absolute bottom-3 md:right-6 right-14 md:h-[65px]  h-[85px] object-contain"
             />
           </div>
 
           {/* Card 4 */}
           <div
-            className="relative rounded-3xl shadow-md w-full h-full"
+            className="relative rounded-3xl shadow-md md:w-full md:h-[150px]
+            "
             style={{ backgroundColor: "rgba(145, 210, 195, 0.5)" }}
           >
             <img
               src="/country.png"
               alt="Global Participation"
-              className="absolute top-3 left-4 h-[40px] object-contain"
+              className="absolute top-3 left-4 md:h-[40px] h-[50px] object-contain"
             />
             <div className="absolute bottom-6 right-4 text-right">
-              <h3 className="text-[18px] font-bold text-black">45+ Countries</h3>
-              <p className="text-[14px] text-black mt-1">
+              <h3 className="md:text-[18px] text-[20px] font-bold text-black">45+ Countries</h3>
+              <p className="md:text-[14px] text-[20px] text-black mt-1">
                 Open to Global Participation
               </p>
             </div>
@@ -90,7 +91,7 @@ const Impact = () => {
         </div>
 
         {/* ✅ Right Side - Text Content */}
-        <div className="text-left sm:pl-6 md:pl-16">
+        <div className="text-left sm:pl-6 md:pl-16 -md:mt-20">
           <h2 className="text-[30px] sm:text-[44px] font-ubuntu font-normal text-[#1A1A1A] leading-[1.2]">
             The GSN Impact: <br />
             Growth, Connection & <br />

@@ -34,7 +34,7 @@ const Hero = () => {
           <span className="inline-block ml-4 h-[70px] overflow-hidden align-middle relative">
             <span
               ref={containerRef}
-              className="inline-block transition-transform duration-700 ease-in-out  -ml-1 -mt-1 will-change-transform"
+              className="inline-block transition-transform duration-700 ease-in-out -ml-1 md:-ml-1.5 md:-mt-2 -mt-1 will-change-transform"
               style={{
                 transform: `translateY(-${index * 70}px)`
               }}

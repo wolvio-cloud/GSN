@@ -73,7 +73,7 @@ const Navigation = () => {
             <FaChevronDown className="ml-1 text-sm" />
           </button>
           {dropdownOpen && (
-            <div className="absolute top-10 left-0 rounded-md shadow-lg border border-white/20 py-2 w-48 z-10">
+            <div className="absolute top-10 md:-left-5 rounded-md shadow-lg border border-white/20 py-2 w-35 z-10">
               <NavLink
                 to="/about-us"
                 className={({ isActive }) =>
