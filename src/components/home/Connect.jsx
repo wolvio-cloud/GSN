@@ -5,19 +5,19 @@ const Connect = () => {
     {
       title: "AI-Enhanced Business Connections",
       desc: "GSN's smart matchmaking connects you with the most relevant members based on industry, goals, and values.",
-      image: "/connect1.png",
+      image: "/connect1.webp",
       index: "01",
     },
     {
       title: "Conscious Collaboration Culture",
       desc: "We believe growth should align with values. GSN integrates mindfulness and spiritual principles into networking.",
-      image: "/connect2.png",
+      image: "/connect2.webp",
       index: "02",
     },
     {
       title: "Tools to Scale Your Business",
       desc: "Everything you need to grow your network and elevate your business in one intelligent platform.",
-      image: "/connect3.png",
+      image: "/connect3.webp",
       index: "03",
     },
   ];

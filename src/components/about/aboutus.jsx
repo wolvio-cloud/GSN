@@ -60,7 +60,7 @@ const AboutUs = () => {
 
         {/* Image */}
         <img
-          src="/about/a12.PNG"
+          src="/about/a12.webp"
           alt="About GSN"
           className="rounded-[20px] w-full max-w-[550px] h-[590px] md:h-[550px] lg:h-[590px] object-cover  lg:-mt-30"
         />

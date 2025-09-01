@@ -24,7 +24,7 @@ const Mission = () => {
             {/* LEFT - Image */}
             <div className="relative flex justify-center z-20 w-full">
               <img
-                src="/about/mission.png"
+                src="/about/mission.webp"
                 alt="Mission visual"
                 className="rounded-[20px] w-full object-cover -mb-8 sm:-mb-12 md:-mb-20 lg:-mb-28"
                 style={{ minHeight: "320px", maxHeight: "720px" }}

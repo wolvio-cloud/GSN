@@ -4,21 +4,21 @@ const testimonials = [
   {
     name: "Karunamoorthy",
     title: "Waste Water Treatment",
-    image: "/experience/inspiring/i1.png",
+    image: "/experience/inspiring/i1.webp",
     content:
       "GSN gave me more than just business leads — it gave me purpose-driven partners who align with my values. I’ve never felt so connected to my work and network.",
   },
   {
     name: "Hariprasad",
     title: "Digital Marketing Consultant",
-    image: "/experience/inspiring/i2.png",
+    image: "/experience/inspiring/i2.webp",
     content:
       "GSN gave me more than just business leads — it gave me purpose-driven partners who align with my values. I’ve never felt so connected to my work and network.",
   },
   {
     name: "Sasirekha",
     title: "HVAC",
-    image: "/experience/inspiring/i3.png",
+    image: "/experience/inspiring/i3.webp",
     content:
       "GSN gave me more than just business leads — it gave me purpose-driven partners who align with my values. I’ve never felt so connected to my work and network.",
   },
