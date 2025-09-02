@@ -110,7 +110,7 @@ const Connect = () => {
                 alt={`Connect ${card.index}`}
                 className={`absolute bottom-0 ${
                   isReversed ? "left-0" : "right-0"
-                } w-[190px] sm:w-[460px] h-[160px] sm:h-[350px] object-contain sm:object-cover ${bgCurves}`}
+                } w-[191px] sm:w-[460px] h-[130px] sm:h-[350px] object-contain sm:object-cover ${bgCurves}`}
               />
 
               {/* Text */}

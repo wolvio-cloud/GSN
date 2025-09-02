@@ -13,7 +13,7 @@ const CookieDetail = () => {
 
       <div className="max-w-[1694px] mx-auto relative">
         {/* Intro Paragraph - FULL WIDTH */}
-        <p className="font-ubuntu font-medium text-[18px] md:text-[18px] leading-[1.4] text-center mb-12 max-w-[1000px] mx-auto mt-10 md:mt-20">
+        <p className="font-ubuntu font-medium text-[18px] md:text-[18px] leading-[1.4] text-center mb-12 max-w-[1000px] mx-auto mt-10 md:mt-10">
           This Cookie Policy explains how{" "}
           <strong>Global Success Network (GSN)</strong> uses cookies and similar
           technologies to provide, improve, and personalize your experience on

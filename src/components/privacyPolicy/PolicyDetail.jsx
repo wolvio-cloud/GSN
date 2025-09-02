@@ -23,9 +23,9 @@ const PrivacyPolicy = () => {
               secure.
             </p>
         {/* Content & Sidebar */}
-        <div className="flex flex-col lg:flex-row gap-10 mt-8 ">
+        <div className="flex flex-col lg:flex-row gap-10 mt-8 md:mt-8">
           {/* Left Content */}
-         <div className="flex-1  max-w-[900px] mx-auto lg:mx-0 md:-mt-2 -mt-12">
+         <div className="flex-1  max-w-[900px] mx-auto lg:mx-0 md:-mt-15">
             
 
             {/* Section 1 */}

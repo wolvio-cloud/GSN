@@ -12,7 +12,7 @@ const TermsDetail = () => {
 
       <div className="max-w-[1694px] mx-auto relative">
         {/* Intro Paragraph */}
-            <p className="font-ubuntu font-medium text-[18px] md:text-[18px] leading-[1.4] text-center mb-12 max-w-[900px] px:4 md:px-2 mx-auto mt-10 md:mt-16">
+            <p className="font-ubuntu font-medium text-[18px] md:text-[18px] leading-[1.4] text-center mb-12 max-w-[900px] px:4 md:px-2 mx-auto mt-10 md:mt-10">
               Welcome to <strong>Global Success Network (GSN)</strong>. These
               Terms and Conditions (“Terms”) govern your access to and use of
               our website, services, content, features, and membership

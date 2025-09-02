@@ -66,7 +66,7 @@ const Impact = () => {
             <img
               src="/graph.png"
               alt="Smart Matchmaking"
-              className="absolute bottom-3 md:right-6 right-14 md:h-[65px]  h-[85px] object-contain"
+              className="absolute bottom-3 md:right-6 right-14 md:h-[55px]  h-[85px] object-contain"
             />
           </div>
 
