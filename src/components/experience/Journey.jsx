@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const Journey = () => {
   return (
-    <section className="px-4 md:px-8 py-16 -mt-20 md:-mt-65">
+    <section className="px-4 md:px-8 py-16 ">
       <div className="bg-[#06172D] rounded-[50px] w-full max-w-5xl mx-auto px-6 md:px-20 py-12 md:py-14 text-center text-white">
         {/* Main Heading */}
         <h2 className="text-[26px] md:text-[50px] font-ubuntu font-bold leading-tight mb-6">

@@ -5,13 +5,13 @@ const Heroexp = () => {
     <section className="relative w-full h-[100vh] sm:h-[100vh] md:h-[120vh] flex items-center justify-center text-center overflow-hidden">
       {/* Background Video */}
       <video
-  className="absolute top-0 left-0 w-full h-full object-cover"
-  src="/experience/h1exp.mp4"
-  autoPlay
-  loop
-  muted
-  playsInline
-></video>
+        className="absolute top-0 left-0 w-full h-full object-cover"
+        src="/experience/h1exp.mp4"
+        autoPlay
+        loop
+        muted
+        playsInline
+      ></video>
 
 
       {/* Overlay Text */}
@@ -24,7 +24,7 @@ const Heroexp = () => {
         </p>
       </div>
 
-          </section>
+    </section>
   );
 };
 

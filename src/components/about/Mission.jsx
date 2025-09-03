@@ -2,7 +2,7 @@ import React from "react";
 
 const Mission = () => {
   return (
-    <section className="bg-white py-16 md:py-24 px-6 md:px-16 lg:px-24 overflow-x-hidden">
+    <section className="bg-white py-16 md:py-1 px-6 md:px-16 lg:px-24  ">
       <div className="max-w-7xl mx-auto relative">
         {/* ✅ Heading moved to the right */}
         <div className="flex justify-end">
@@ -17,26 +17,26 @@ const Mission = () => {
           </h2>
         </div>
 
-        {/* Outer container with border + rounded corners */}
-        <div className="relative bg-white border border-gray-200 rounded-[28px] p-6 md:p-10 overflow-visible">
-          <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,520px)_5fr] gap-6 lg:gap-10 items-start">
-            {/* LEFT - Image */}
-            {/* LEFT - Image */}
-           <div className="relative flex justify-center z-20 w-full">
-  <img
-    src="/about/mission.webp"
-    alt="Mission visual"
-    className="
+        {/* Outer container only wraps text */}
+        <div className="relative bg-white border border-gray-200 rounded-[18px] p-6 md:p-10">
+          <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,420px)_5fr] gap-6 lg:gap-10 items-start">
+            {/* LEFT - Image (taken out of box height flow with absolute positioning) */}
+            <div className="relative w-full">
+              <img
+                src="/about/mission.webp"
+                alt="Mission visual"
+                className="
       rounded-[20px] 
-      w-full object-cover 
-      -mb-8 sm:-mb-12 md:-mb-20 lg:-mb-28 
-      min-h-[320px] md:min-h-[480px] lg:min-h-[600px] 
+      w-full object-cover
+      h-[180px] md:h-[280px] lg:h-[360px]   /* 🔽 Reduced heights */
+      lg:absolute lg:top-0 lg:left-0
     "
-  />
-</div>
+              />
+            </div>
 
-            {/* RIGHT - Text */}
-            <div className="relative z-20 flex flex-col justify-start mt-4 sm:mt-0">
+
+            {/* RIGHT - Text (controls box height) */}
+            <div className="relative z-20 flex flex-col justify-start">
               <p
                 className="text-black font-ubuntu mb-6"
                 style={{

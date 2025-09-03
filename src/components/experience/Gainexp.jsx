@@ -45,7 +45,7 @@ const Gainexp = () => {
   ];
 
   return (
-    <section className="w-full px-4 sm:px-8 md:px-12 py-16 bg-white">
+    <section className="w-full px-4 sm:px-8 md:px-12 py-12 bg-white">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-[28px] sm:text-[32px] md:text-[42px] text-black font-bold text-center font-ubuntu mb-12">
           What you gain with GSN

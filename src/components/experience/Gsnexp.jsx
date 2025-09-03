@@ -5,7 +5,7 @@ const gsnCards = [
     title: "GSN In-Person Circles",
     description:
       "Experience the power of face-to-face connection. Build deeper relationships through intentional, local meetups.",
-    image: "/experience/gsnexp/e1.webp", // adjust your path accordingly
+    image: "/experience/gsnexp/e1.webp",
   },
   {
     title: "GSN Hybrid Sessions",
@@ -23,23 +23,31 @@ const gsnCards = [
 
 const Gsnexp = () => {
   return (
-    <section className="bg-white py-10 px-4 md:px-20">
-      {/* Heading */}
-      <div className="text-left md:w-[400px] mb-10 md:ml-7 justify-center">
-        <h2 className="text-[#153153] text-[28px] md:text-[35px] font-ubuntu font-bold leading-snug">
-          Choose Your GSN Experience
-        </h2>
-        <p className="text-black text-[16px] md:text-[18px] font-ubuntu font-normal mt-4 leading-snug">
-          Connect in the way that aligns best with your goals — flexible formats
-          designed for your lifestyle and business journey
-        </p>
-      </div>
+    <section className="w-full px-4 sm:px-8 md:px-12 py-14 bg-white">
+      <div className="relative grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+        {/* Heading & Description */}
+        <div>
+          <h2 className="text-[#153153] text-[28px] md:text-[35px] font-ubuntu font-bold leading-snug">
+            Choose Your GSN Experience
+          </h2>
+          <p className="text-[#183466] text-[16px] md:text-[18px] font-ubuntu mt-4 leading-snug">
+            Connect in the way that aligns best with your <br />
+            goals —  flexible formats designed for your lifestyle <br />
+            and business journey
+          </p>
 
-      {/* Cards layout */}
-      <div className="relative flex flex-col items-center gap-5 md:gap-20 max-w-6xl mx-auto md:-mt-60 ">
+        </div>
 
         {/* Card 1 */}
-        <div className="flex flex-col md:flex-row items-center bg-[#D2DCE4] rounded-[30px] w-full md:w-[500px] min-h-[200px] md:self-end p-6 md:p-10 gap-6 ">
+        <div className="relative bg-[#D2DCE4] rounded-[30px] p-6 md:p-10 shadow-sm flex flex-col md:flex-row items-center gap-6">
+          {/* Connector (Card 1 → Card 3 vertical) */}
+          <div className="absolute left-1/2 bottom-0 translate-y-full -translate-x-1/2 hidden md:flex flex-col items-center">
+            <div className="h-6 w-[2px] bg-[#8d8e91] relative">
+              <div className="w-3 h-3 rounded-full border-2 border-[#8d8e91] bg-white absolute -top-0 left-1/2 -translate-x-1/2"></div>
+              <div className="w-3 h-3 rounded-full border-2 border-[#8d8e91] bg-white absolute -bottom-2 left-1/2 -translate-x-1/2"></div>
+            </div>
+          </div>
+
           <img
             src={gsnCards[0].image}
             alt={gsnCards[0].title}
@@ -49,56 +57,49 @@ const Gsnexp = () => {
             <h3 className="text-[#153153] text-[20px] md:text-[22px] font-ubuntu font-bold mb-4">
               {gsnCards[0].title}
             </h3>
-            <p className="text-[#183466] text-[14px] md:text-[16px] font-ubuntu font-normal leading-snug">
+            <p className="text-[#183466] text-[14px] md:text-[16px] font-ubuntu leading-snug">
               {gsnCards[0].description}
             </p>
           </div>
         </div>
 
-        {/* Vertical line + hollow dots between Card 1 & 2 */}
-<div className="hidden md:flex flex-col items-center md:-mt-20 md:ml-150">
-  <div className="w-3 h-3 rounded-full border-2 border-[#8d8e91] bg-transparent mt-1" />
-  <div className="w-[2px] h-12 bg-[#8d8e91]" />
-  <div className="w-3 h-3 rounded-full border-2 border-[#8d8e91] bg-transparent mb-1" />
-</div>
-
-
         {/* Card 2 */}
-        <div className="flex flex-col md:flex-row items-center bg-[#D2DCE4] rounded-[30px] w-full md:w-[500px] min-h-[200px] md:self-end p-6 md:p-10 gap-6 md:-mr-2 md:-mt-20">
+        <div className="relative bg-[#D2DCE4] rounded-[30px] p-6 md:p-10 shadow-sm flex flex-col md:flex-row items-center gap-6">
+          {/* Connector (Card 2 → Card 3 horizontal) */}
+          <div className="absolute right-0 top-1/2 translate-x-full -translate-y-1/2 hidden md:flex items-center">
+            <div className="w-6 h-[2px] bg-[#8d8e91] relative">
+              <div className="w-3 h-3 rounded-full border-2 border-[#8d8e91] bg-white absolute -left-1 top-1/2 -translate-y-1/2"></div>
+              <div className="w-3 h-3 rounded-full border-2 border-[#8d8e91] bg-white absolute -right-3 top-1/2 -translate-y-1/2"></div>
+            </div>
+          </div>
+
           <img
             src={gsnCards[1].image}
             alt={gsnCards[1].title}
             className="w-full md:w-[180px] h-[194px] object-cover rounded-2xl"
           />
           <div>
-            <h3 className="text-[#153153] text-[20px] md:text-[20px] font-ubuntu font-bold mb-4">
+            <h3 className="text-[#153153] text-[20px] md:text-[22px] font-ubuntu font-bold mb-4">
               {gsnCards[1].title}
             </h3>
-            <p className="text-[#183466] text-[14px] md:text-[16px] font-ubuntu font-normal leading-snug">
+            <p className="text-[#183466] text-[14px] md:text-[16px] font-ubuntu leading-snug">
               {gsnCards[1].description}
             </p>
           </div>
         </div>
 
-       {/* Horizontal line + dots between Card 2 & 3 */}
-<div className="hidden md:flex items-center justify-center w-[55px] h-[2px] bg-[#8d8e91] relative -mt-12 md:-mt-55 ml-8">
-  <div className="w-3 h-3 rounded-full border-2 border-[#8d8e91] bg-transparent absolute -left-3" />
-  <div className="w-3 h-3 rounded-full border-2 border-[#8d8e91] bg-transparent absolute -right-3" />
-</div>
-
-
         {/* Card 3 */}
-        <div className="flex flex-col md:flex-row items-center bg-[#D2DCE4] rounded-[30px] w-full md:w-[500px] min-h-[200px] md:self-start p-6 md:p-10 gap-6 mt-0 md:-mt-53 md:ml-6">
+        <div className="bg-[#D2DCE4] rounded-[30px] p-6 md:p-10 shadow-sm flex flex-col md:flex-row items-center gap-6">
           <img
             src={gsnCards[2].image}
             alt={gsnCards[2].title}
             className="w-full md:w-[180px] h-[194px] object-cover rounded-2xl"
           />
           <div>
-            <h3 className="text-[#153153] text-[20px] md:text-[20px] font-ubuntu font-bold mb-4">
+            <h3 className="text-[#153153] text-[20px] md:text-[22px] font-ubuntu font-bold mb-4">
               {gsnCards[2].title}
             </h3>
-            <p className="text-[#183466] text-[14px] md:text-[16px] font-ubuntu font-normal leading-snug">
+            <p className="text-[#183466] text-[14px] md:text-[16px] font-ubuntu leading-snug">
               {gsnCards[2].description}
             </p>
           </div>
