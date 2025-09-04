@@ -40,9 +40,9 @@ const Impact = () => {
               </p>
             </div>
             <img
-              src="/suit.png"
+              src="/impact.png"
               alt="Business"
-              className="absolute md:bottom-[24px] bottom-[16px] md:right-[-90px]  right-[-120px] md:scale-[1.3] scale-[1.1] z-10 object-contain pointer-events-none"
+              className="absolute md:bottom-[-13px] bottom-[16px] md:right-[-70px]  right-[-120px] md:scale-[0.9] scale-[1.1] z-10 object-contain pointer-events-none"
             />
           </div>
 
