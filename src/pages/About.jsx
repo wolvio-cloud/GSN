@@ -11,8 +11,6 @@ const About = () => {
             <AboutUs />
             <Mission />
             <Values/>
-           
-           
         </>
     )
 }

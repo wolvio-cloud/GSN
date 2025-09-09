@@ -26,8 +26,8 @@ const testimonials = [
 
 const Inspiring = () => {
   return (
-    <section className="w-full px-4 sm:px-8 md:px-12 py-14 bg-white">
-      <div className="relative grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+    <section className="py-16 px-6 md:px-16 lg:px-24 w-full bg-white">
+      <div className="mx-auto px-4 md:px-6 lg:px-8 relative grid grid-cols-1 md:grid-cols-2 gap-8">
         {/* Card 1 → Heading & Description */}
         <div>
           <h2 className="text-[#153153] text-[28px] md:text-[35px] font-ubuntu font-bold leading-snug">

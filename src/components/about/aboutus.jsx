@@ -2,7 +2,7 @@ import React from "react";
 
 const AboutUs = () => {
   return (
-    <section className="w-full bg-white px-[5%] py-16 lg:py-24">
+    <section className="py-16 px-6 md:px-16 lg:px-24 w-full">
       {/* Top Row */}
       <div className="flex flex-col lg:flex-row justify-between items-start gap-8 lg:gap-12">
         {/* Left Text Block */}
@@ -29,18 +29,19 @@ const AboutUs = () => {
       </div>
 
       {/* Bottom Row */}
-      <div className="-mt-2 flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
+      <div className="mt-10 flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
         {/* Card 1 */}
-        <div className="relative bg-[#D2DCE4] rounded-[20px] p-6  md:w-[500px]  md:h-[250px] mt-10">
+        <div className="relative flex-1 bg-[#D2DCE4] rounded-[20px] p-10 flex flex-col min-h-[260px]">
           <h3 className="text-[#183466] font-ubuntu font-bold text-[28px] md:text-[32px] lg:text-[24px]">
-            Grow Together
+            Grow <br /> Together
           </h3>
           <p className="mt-4 text-[#183466] font-ubuntu text-[18px] md:text-[22px] lg:text-[18px] leading-relaxed">
             We rise by uplifting one another through shared purpose and
             meaningful connection.
           </p>
+
           {/* Right Line Connector */}
-          <div className="hidden lg:flex absolute top-1/2 right-0 translate-x-full items-center">
+          <div className="hidden lg:flex absolute top-1/2 right-[-46px] items-center">
             <span className="w-3 h-3 rounded-full border-2 border-[#D2DCE4] bg-transparent"></span>
             <div className="w-5 h-[2px] bg-[#D2DCE4]"></div>
             <span className="w-3 h-3 rounded-full border-2 border-[#D2DCE4] bg-transparent"></span>
@@ -48,9 +49,9 @@ const AboutUs = () => {
         </div>
 
         {/* Card 2 */}
-        <div className="bg-[#D2DCE4] rounded-[20px] p-8   md:w-[500px] h-auto md:h-[250px] md:mt-10">
+        <div className="flex-1 bg-[#D2DCE4] rounded-[20px] p-10 flex flex-col min-h-[260px]">
           <h3 className="text-[#183466] font-ubuntu font-bold text-[28px] md:text-[32px] lg:text-[24px]">
-            Win Together
+            Win <br /> Together
           </h3>
           <p className="mt-4 text-[#183466] font-ubuntu text-[18px] md:text-[22px] lg:text-[18px] leading-relaxed">
             We rise by uplifting one another through shared purpose and
@@ -59,11 +60,13 @@ const AboutUs = () => {
         </div>
 
         {/* Image */}
-        <img
-          src="/about/a12.webp"
-          alt="About GSN"
-          className="rounded-[20px] w-full md:w-[500px] h-[590px] md:h-[550px] lg:h-[590px] object-cover  lg:-mt-30"
-        />
+        <div className="flex-1">
+          <img
+            src="/about/a12.webp"
+            alt="About GSN"
+            className="rounded-[20px] w-full min-h-[450px] object-cover"
+          />
+        </div>
       </div>
     </section>
   );

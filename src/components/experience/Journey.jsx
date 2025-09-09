@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 
 const Journey = () => {
   return (
-    <section className="px-4 md:px-8 py-16 ">
-      <div className="bg-[#06172D] rounded-[50px] w-full max-w-5xl mx-auto px-6 md:px-20 py-12 md:py-14 text-center text-white">
+    <section className="py-16 px-8 md:px-16 lg:px-30 w-full">
+      <div className="mx-auto px-4 md:px-6 lg:px-8 md:py-14 bg-[#06172D] rounded-[50px] text-center text-white">
         {/* Main Heading */}
         <h2 className="text-[26px] md:text-[50px] font-ubuntu font-bold leading-tight mb-6">
           Start your journey with GSN

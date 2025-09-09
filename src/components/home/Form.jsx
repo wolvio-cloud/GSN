@@ -92,8 +92,8 @@ const Form = () => {
   };
 
   return (
-    <section id="contact" className="w-full bg-white py-20 px-6 md:px-16 lg:px-24">
-      <div className="max-w-6xl mx-auto flex flex-col lg:flex-row gap-12 items-start">
+    <section id="contact" className="w-full bg-white py-16 px-6 md:px-16 lg:px-24 -mt-4">
+      <div className="mx-auto px-4 md:px-6 lg:px-8 flex flex-col lg:flex-row gap-12 items-start">
         {/* Left Side */}
         <div className="flex-1">
           <h2 className="text-[40px] font-ubuntu font-bold text-[#1A1A1A] leading-snug">

@@ -63,9 +63,10 @@ const Connect = () => {
   }, []);
   //console.log("ref", cardRefs)
   return (
-    <section className="relative w-full bg-white py-16 px-6 md:px-16 lg:px-24">
+    <section className="relative py-20 px-8 md:px-22 lg:px-34 bg-white">
+
       {/* Heading */}
-      <div className="text-center max-w-4xl mx-auto mb-16 sm:mb-24">
+      <div className="text-center mx-auto px-4 md:px-6 lg:px-8 mb-16 sm:mb-24">
         <h2 className="text-[28px] sm:text-[36px] md:text-[40px] font-ubuntu font-bold text-[#1A1A1A] leading-tight">
           Connect · Evolve · Thrive
         </h2>
@@ -93,7 +94,7 @@ const Connect = () => {
             >
               {/* Background pattern with corner curves */}
               <div
-  className={`absolute 
+                className={`absolute 
     ${isReversed ? "left-0" : "right-0"} 
     mt-35 sm:mt-3 
     w-[70%] sm:w-1/2   // 👈 mobile: 80% width, sm+: 50%
@@ -101,23 +102,21 @@ const Connect = () => {
     bg-[#111111] opacity-20 
     bg-[radial-gradient(white_1px,transparent_1px)] 
     bg-[length:14px_14px] ${bgCurves}`}
-></div>
+              ></div>
 
 
               {/* Image with same corner curves */}
               <img
                 src={card.image}
                 alt={`Connect ${card.index}`}
-                className={`absolute bottom-0 ${
-                  isReversed ? "left-0" : "right-0"
-                } w-[191px] sm:w-[460px] h-[130px] sm:h-[350px] object-contain sm:object-cover ${bgCurves}`}
+                className={`absolute bottom-0 ${isReversed ? "left-0" : "right-0"
+                  } w-[191px] sm:w-[460px] h-[130px] sm:h-[350px] object-contain sm:object-cover ${bgCurves}`}
               />
 
               {/* Text */}
               <div
-                className={`relative z-10 mt-2 sm:mt-0 max-w-full sm:max-w-[40%] ${
-                  isReversed ? "sm:ml-auto sm:text-right" : ""
-                }`}
+                className={`relative z-10 mt-2 sm:mt-0 max-w-full sm:max-w-[40%] ${isReversed ? "sm:ml-auto sm:text-right" : ""
+                  }`}
               >
                 <h3 className="text-[18px] sm:text-[24px] font-ubuntu font-bold">
                   {card.title}
@@ -129,9 +128,8 @@ const Connect = () => {
 
               {/* Card Number */}
               <span
-                className={`text-[24px] sm:text-[40px] font-playfair absolute bottom-4 sm:bottom-6 ${
-                  isReversed ? "right-6 sm:right-10" : "left-6 sm:left-10"
-                }`}
+                className={`text-[24px] sm:text-[40px] font-playfair absolute bottom-4 sm:bottom-6 ${isReversed ? "right-6 sm:right-10" : "left-6 sm:left-10"
+                  }`}
               >
                 {card.index}
               </span>

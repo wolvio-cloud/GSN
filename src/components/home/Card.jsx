@@ -42,7 +42,7 @@ const cardsData = [
 const Cards = () => {
   return (
     <section className="w-full bg-white py-16 px-6 md:px-16 lg:px-24 -mt-4">
-      <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 justify-items-center relative overflow-visible">
+      <div className="mx-auto px-4 md:px-6 lg:px-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 justify-items-center relative overflow-visible">
         {cardsData.map((card, index) => {
           const isIconRight = card.iconPosition === "right";
 
@@ -51,7 +51,7 @@ const Cards = () => {
               key={index}
               className="relative group rounded-2xl border border-gray-300 p-6 bg-white 
                 shadow-md transition-all duration-300 hover:bg-[#1A1A1A] cursor-pointer 
-                w-[270px] text-left z-10 overflow-visible"
+                w-[100%] text-left z-10 overflow-visible"
             >
               {/* === LINE WITH DOT === */}
               {card.line === "top-right" && (
@@ -76,21 +76,20 @@ const Cards = () => {
               )}
 
               {/* === ICON === */}
-             <div
-  className={`mb-6 ${
-    isIconRight ? "flex justify-end" : "text-[#324456]"
-  } group-hover:text-white transition-colors duration-300`}
->
-  {typeof card.icon.type === "string" ? (
-    // It's an image-based icon
-    <div className="group-hover:brightness-0 group-hover:invert transition duration-300">
-      {card.icon}
-    </div>
-  ) : (
-    // It's a React icon (FaAward, FaShieldAlt)
-    card.icon
-  )}
-</div>
+              <div
+                className={`mb-6 ${isIconRight ? "flex justify-end" : "text-[#324456]"
+                  } group-hover:text-white transition-colors duration-300`}
+              >
+                {typeof card.icon.type === "string" ? (
+                  // It's an image-based icon
+                  <div className="group-hover:brightness-0 group-hover:invert transition duration-300">
+                    {card.icon}
+                  </div>
+                ) : (
+                  // It's a React icon (FaAward, FaShieldAlt)
+                  card.icon
+                )}
+              </div>
 
               {/* === TITLE === */}
               <h3 className="text-[17px] font-ubuntu font-bold mb-2 text-[#1A1A1A] group-hover:text-white transition duration-300">
