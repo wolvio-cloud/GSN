@@ -92,7 +92,7 @@ const Form = () => {
   };
 
   return (
-    <section id="contact" className="w-full bg-white py-16 px-6 md:px-16 lg:px-24 -mt-4">
+    <section id="contact" className="w-full mt-2 bg-white py-16 px-6 md:px-16 lg:px-24 -mt-4">
       <div className="mx-auto px-4 md:px-6 lg:px-8 flex flex-col lg:flex-row gap-12 items-start">
         {/* Left Side */}
         <div className="flex-1">

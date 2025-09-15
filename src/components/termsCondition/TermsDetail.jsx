@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const TermsDetail = () => {
   return (
     <section
-      className="bg-white relative z-20 px-4 md:px-12 lg:px-24 py-10 -mt-8 -mb-8 rounded-[26px]"
+      className="bg-white relative z-20 px-4 md:px-12 lg:px-24 py-10 mt-8 mb-8 rounded-[26px]"
       style={{ borderRadius: "28px" }}
     >
       {/* Top rounded container */}
