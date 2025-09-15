@@ -22,8 +22,8 @@ const ContentSection1 = () => {
   return (
     <section className="py-16 px-6 md:px-16 lg:px-24 w-full bg-white">
       <div className="mx-auto px-4 md:px-6 lg:px-8">
-        {/* Grid without fixed row heights */}
-        <div className="grid grid-cols-3 gap-8 items-center">
+        {/* Responsive grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-center">
           {/* Row 1 */}
           <div>
             <h1 className="text-2xl font-bold text-[#153153]">
@@ -36,20 +36,20 @@ const ContentSection1 = () => {
             </p>
           </div>
 
-          <div></div>
+          {/* Spacer (hidden on mobile) */}
+          <div className="hidden lg:block"></div>
 
-          <div className="bg-[#D2DCE4] rounded-3xl p-15">
+          <div className="bg-[#D2DCE4] rounded-3xl p-6">
             <h3 className="text-2xl font-bold text-[#153153]">
               {features1[0].title}
             </h3>
             <p className="text-[#153153] mt-4">{features1[0].description}</p>
           </div>
 
-          {/* Row 2 (shrinks automatically) */}
-          <div></div>
-          <div></div>
-          <div className="flex justify-center">
-            {/* Vertical Line */}
+          {/* Row 2 – connector line (desktop only) */}
+          <div className="hidden lg:block"></div>
+          <div className="hidden lg:block"></div>
+          <div className="hidden lg:flex justify-center">
             <div className="w-[2px] bg-gray-300 h-16 relative">
               <div className="w-3 h-3 rounded-full border-2 border-gray-300 bg-transparent absolute -top-2.5 -left-[5px]"></div>
               <div className="w-3 h-3 rounded-full border-2 border-gray-300 bg-transparent absolute -bottom-2.5 -left-[5px]"></div>
@@ -57,22 +57,22 @@ const ContentSection1 = () => {
           </div>
 
           {/* Row 3 */}
-          <div className="bg-[#D2DCE4] rounded-3xl p-15">
+          <div className="bg-[#D2DCE4] rounded-3xl p-6">
             <h3 className="text-2xl font-bold text-[#153153]">
               {features1[1].title}
             </h3>
             <p className="text-[#153153] mt-4">{features1[1].description}</p>
           </div>
 
-          {/* Horizontal Line */}
-          <div className="flex justify-center">
+          {/* Horizontal Line (desktop only) */}
+          <div className="hidden lg:flex justify-center">
             <div className="w-full h-[2px] bg-gray-300 relative">
               <div className="w-3 h-3 rounded-full border-2 border-gray-300 bg-transparent absolute -left-2.5 -top-1.5"></div>
               <div className="w-3 h-3 rounded-full border-2 border-gray-300 bg-transparent absolute -right-2.5 -top-1.5"></div>
             </div>
           </div>
 
-          <div className="bg-[#D2DCE4] rounded-3xl p-15">
+          <div className="bg-[#D2DCE4] rounded-3xl p-6">
             <h3 className="text-2xl font-bold text-[#153153]">
               {features1[2].title}
             </h3>
