@@ -63,7 +63,7 @@ const Connect = () => {
   }, []);
   //console.log("ref", cardRefs)
   return (
-    <section className="relative py-20 px-8 md:px-22 lg:px-34 bg-white">
+    <section className="relative py-6 px-6 md:px-22 lg:px-34 bg-white mt-2 sm:mt-10">
 
       {/* Heading */}
       <div className="text-center mx-auto px-4 md:px-6 lg:px-8 mb-16 sm:mb-24">
@@ -96,21 +96,20 @@ const Connect = () => {
               <div
                 className={`absolute 
     ${isReversed ? "left-0" : "right-0"} 
-    mt-35 sm:mt-3 
-    w-[70%] sm:w-1/2   // 👈 mobile: 80% width, sm+: 50%
+    mt-30 sm:mt-3 
+    w-[80%] sm:w-1/2   // 👈 mobile: 80% width, sm+: 50%
     h-[260px] sm:h-full
     bg-[#111111] opacity-20 
     bg-[radial-gradient(white_1px,transparent_1px)] 
     bg-[length:14px_14px] ${bgCurves}`}
               ></div>
 
-
               {/* Image with same corner curves */}
               <img
                 src={card.image}
                 alt={`Connect ${card.index}`}
                 className={`absolute bottom-0 ${isReversed ? "left-0" : "right-0"
-                  } w-[191px] sm:w-[460px] h-[130px] sm:h-[350px] object-contain sm:object-cover ${bgCurves}`}
+                  } w-[191px]  sm:w-[460px] h-[130px] sm:h-[350px] object-contain sm:object-cover ${bgCurves}`}
               />
 
               {/* Text */}

@@ -54,7 +54,10 @@ const Card = ({ number, title, text }) => (
 
 const CoreValues = () => {
   return (
-    <section className="py-16 px-6 md:px-16 lg:px-24 mt-15 w-full bg-white">
+  <section className="py-2 px-8 sm:px-6 md:px-16 lg:px-24 mt-0 sm:mt-22 w-full bg-white">
+
+
+
       <div className="max-w-[1400px] mx-auto">
         {/* Header */}
         <div className="flex flex-col lg:flex-row items-start justify-between gap-8">

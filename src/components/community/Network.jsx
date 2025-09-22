@@ -10,7 +10,7 @@ const regions = [
 
 const Network = () => {
   return (
-    <section className="py-16 px-6 md:px-16 lg:px-24 w-full bg-white">
+    <section className="py-8 px-6 md:px-16 lg:px-24 w-full bg-white">
       {/* Title and Description */}
       <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center mb-12 gap-6">
         <div>

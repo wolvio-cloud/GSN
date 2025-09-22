@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 
 const GsnChapterSection2 = () => {
   return (
-    <section className="py-12 px-4 sm:px-8 md:px-16 w-full">
-      <div className="mx-auto px-4 sm:px-6 md:px-8 py-10 sm:py-14 bg-[#06172D] rounded-3xl sm:rounded-[50px] text-center text-white">
+    <section className="py-6 px-4 sm:px-8 md:px-16 w-full">
+      <div className="py-6 px-4 sm:px-6 md:px-8 py-10 sm:py-14 bg-[#06172D] rounded-3xl sm:rounded-[50px] text-center text-white">
         {/* Main Heading */}
         <h2 className="text-[22px] sm:text-[32px] md:text-[50px] font-ubuntu font-bold leading-snug sm:leading-tight mb-4 sm:mb-6">
           Start your journey with GSN

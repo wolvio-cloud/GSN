@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const nContinent = () => {
   return (
-    <section className="py-16 px-6 md:px-16 lg:px-24 bg-white">
+    <section className="py-6 px-6 md:px-16 lg:px-24 bg-white">
       {/* Top section: Heading + CTA */}
       <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center mb-12">
         <div>

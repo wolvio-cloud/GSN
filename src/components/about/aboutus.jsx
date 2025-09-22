@@ -2,7 +2,8 @@ import React from "react";
 
 const AboutUs = () => {
   return (
-    <section className="py-16 px-6 md:px-16 lg:px-24 w-full">
+    <section className="py-6 px-6 sm:px-6 md:px-16 lg:px-24 w-full">
+
       {/* Top Row */}
       <div className="flex flex-col lg:flex-row justify-between items-start gap-8 lg:gap-12">
         {/* Left Text Block */}

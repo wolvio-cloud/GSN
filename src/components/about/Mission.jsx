@@ -2,7 +2,7 @@ import React from "react";
 
 const Mission = () => {
   return (
-    <section className="py-16 px-6 md:px-16 lg:px-24 w-full bg-white">
+     <section className="py-6 px-4 sm:px-6 md:px-16 lg:px-24 w-full">
       <div className="mx-auto px-4 md:px-6 lg:px-8 relative">
         {/* ✅ Heading moved to the right */}
         <div className="flex justify-end">

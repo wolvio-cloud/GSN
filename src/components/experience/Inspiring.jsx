@@ -1,6 +1,6 @@
 import React from "react";
 
-const testimonials = [
+const features1 = [
   {
     name: "Karunamoorthy",
     title: "Waste Water Treatment",
@@ -26,106 +26,96 @@ const testimonials = [
 
 const Inspiring = () => {
   return (
-    <section className="py-16 px-6 md:px-16 lg:px-24 w-full bg-white">
-      <div className="mx-auto px-4 md:px-6 lg:px-8 relative grid grid-cols-1 md:grid-cols-2 gap-8">
-        {/* Card 1 → Heading & Description */}
-        <div>
-          <h2 className="text-[#153153] text-[28px] md:text-[35px] font-ubuntu font-bold leading-snug">
-            Professional & Inspiring
-          </h2>
-          <p className="text-[#183466] text-[16px] md:text-[18px] font-ubuntu mt-4 leading-snug">
-            See how entrepreneurs worldwide are <br />
-            transforming their businesses through <br />
-            GSN's unique blend of conscious networking and<br />
-            intelligent connection.
-          </p>
+    <section className="py-6 px-3 md:py-16 md:px-16 lg:px-24 w-full bg-white">
 
-        </div>
-
-        {/* Card 2 */}
-        <div className="relative bg-[#D2DCE4] rounded-3xl p-6 md:p-8 shadow-sm">
-          {/* Connector (Card 2 → Card 4 vertical) */}
-          <div className="absolute left-1/2 bottom-0 translate-y-full -translate-x-1/2 hidden md:flex flex-col items-center">
-            <div className="h-6 w-[2px] bg-[#8d8e91] relative">
-              {/* Dot at Card 2 bottom */}
-              <div className="w-3 h-3 rounded-full border-1 border-[#8d8e91] bg-white absolute -top-0 left-1/2 -translate-x-1/2"></div>
-              {/* Floating dot above Card 4 */}
-              <div className="w-3 h-3 rounded-full border-1 border-[#8d8e91] bg-white absolute -bottom-2 left-1/2 -translate-x-1/2"></div>
-            </div>
+      <div className="mx-auto px-4 md:px-6 lg:px-8">
+        {/* Responsive grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-center">
+          {/* Row 1 */}
+          <div>
+            <h1 className="text-2xl font-bold text-[#153153]">
+              Professional & Inspiring
+            </h1>
+            <p className="text-lg mt-6 text-[#153153]">
+              See how entrepreneurs worldwide are <br />
+              transforming their businesses through <br />
+              GSN's unique blend of conscious networking and<br />
+              intelligent connection.
+            </p>
           </div>
 
-          <div className="flex items-start gap-4">
+          {/* Spacer (hidden on mobile) */}
+          <div className="hidden lg:block"></div>
+
+          <div className="bg-[#D2DCE4] rounded-3xl p-6">
             <img
-              src={testimonials[0].image}
-              alt={testimonials[0].name}
+              src={features1[0].image}
+              alt={features1[0].name}
               className="w-[55px] h-[55px] object-cover rounded-full"
             />
             <div>
               <h3 className="text-[#153153] text-[20px] font-ubuntu font-medium">
-                {testimonials[0].name}
+                {features1[0].name}
               </h3>
               <p className="text-[#183466] text-[12px] font-ubuntu font-medium">
-                {testimonials[0].title}
+                {features1[0].title}
               </p>
             </div>
+            <p className="text-[#153153] mt-4">{features1[0].content}</p>
           </div>
-          <p className="text-[#183466] text-[14px] font-ubuntu mt-12 mb-5 leading-relaxed">
-            {testimonials[0].content}
-          </p>
-        </div>
 
-        {/* Card 3 */}
-        <div className="relative bg-[#D2DCE4] rounded-3xl p-6 md:p-8 shadow-sm">
-          {/* Connector (Card 3 → Card 4 horizontal) */}
-          <div className="absolute right-0 top-1/2 translate-x-full -translate-y-1/2 hidden md:flex items-center">
-            <div className="w-6 h-[2px] bg-[#8d8e91] relative">
-              {/* Dot at Card 3 right */}
-              <div className="w-3 h-3 rounded-full border-2 border-[#8d8e91] bg-white absolute -left-1 top-1/2 -translate-y-1/2"></div>
-              {/* Floating dot left of Card 4 */}
-              <div className="w-3 h-3 rounded-full border-2 border-[#8d8e91] bg-white absolute -right-3 top-1/2 -translate-y-1/2"></div>
+          {/* Row 2 – connector line (desktop only) */}
+          <div className="hidden lg:block"></div>
+          <div className="hidden lg:block"></div>
+          <div className="hidden lg:flex justify-center">
+            <div className="w-[2px] bg-gray-300 h-16 relative">
+              <div className="w-3 h-3 rounded-full border-2 border-gray-300 bg-transparent absolute -top-2.5 -left-[5px]"></div>
+              <div className="w-3 h-3 rounded-full border-2 border-gray-300 bg-transparent absolute -bottom-2.5 -left-[5px]"></div>
             </div>
           </div>
 
-          <div className="flex items-start gap-4">
-            <img
-              src={testimonials[1].image}
-              alt={testimonials[1].name}
+          {/* Row 3 */}
+          <div className="bg-[#D2DCE4] rounded-3xl p-6">
+                <img
+              src={features1[1].image}
+              alt={features1[1].name}
               className="w-[55px] h-[55px] object-cover rounded-full"
             />
             <div>
               <h3 className="text-[#153153] text-[20px] font-ubuntu font-medium">
-                {testimonials[1].name}
+                {features1[1].name}
               </h3>
               <p className="text-[#183466] text-[12px] font-ubuntu font-medium">
-                {testimonials[1].title}
+                {features1[1].title}
               </p>
             </div>
+            <p className="text-[#153153] mt-4">{features1[1].content}</p>
           </div>
-          <p className="text-[#183466] text-[14px] font-ubuntu mt-12 mb-5 leading-relaxed">
-            {testimonials[1].content}
-          </p>
-        </div>
 
-        {/* Card 4 */}
-        <div className="bg-[#D2DCE4] rounded-3xl p-6 md:p-8 shadow-sm">
-          <div className="flex items-start gap-4">
-            <img
-              src={testimonials[2].image}
-              alt={testimonials[2].name}
+          {/* Horizontal Line (desktop only) */}
+          <div className="hidden lg:flex justify-center">
+            <div className="w-full h-[2px] bg-gray-300 relative">
+              <div className="w-3 h-3 rounded-full border-2 border-gray-300 bg-transparent absolute -left-2.5 -top-1.5"></div>
+              <div className="w-3 h-3 rounded-full border-2 border-gray-300 bg-transparent absolute -right-2.5 -top-1.5"></div>
+            </div>
+          </div>
+
+          <div className="bg-[#D2DCE4] rounded-3xl p-6">
+               <img
+              src={features1[2].image}
+              alt={features1[2].name}
               className="w-[55px] h-[55px] object-cover rounded-full"
             />
             <div>
               <h3 className="text-[#153153] text-[20px] font-ubuntu font-medium">
-                {testimonials[2].name}
+                {features1[2].name}
               </h3>
               <p className="text-[#183466] text-[12px] font-ubuntu font-medium">
-                {testimonials[2].title}
+                {features1[2].title}
               </p>
             </div>
+            <p className="text-[#153153] mt-4">{features1[2].content}</p>
           </div>
-          <p className="text-[#183466] text-[14px] font-ubuntu mt-12 mb-5 leading-relaxed">
-            {testimonials[2].content}
-          </p>
         </div>
       </div>
     </section>

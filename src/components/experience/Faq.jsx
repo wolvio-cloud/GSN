@@ -64,7 +64,8 @@ const FAQ = () => {
   const [openRightIndex, setOpenRightIndex] = useState(null);
 
   return (
-    <section className="bg-white py-16 px-6 md:px-16 lg:px-24 w-full">
+    <section className="bg-white py-6 px-7 sm:py-16 sm:px-6 md:px-16 lg:px-24 w-full">
+
       {/* Header */}
       <div className="mx-auto px-4 md:px-6 lg:px-8 text-center mb-12">
         <h2 className="text-[32px] md:text-[45px] text-black font-ubuntu font-bold mb-4">
