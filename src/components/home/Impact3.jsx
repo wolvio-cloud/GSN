@@ -3,7 +3,7 @@ import { FaUsers } from "react-icons/fa";
 
 const Impact = () => {
   return (
- <section className="relative py-10 px-5 md:px-16 lg:px-24 w-full bg-white overflow-hidden mt-4 sm:mt-20">
+    <section className="relative py-10 px-5 md:px-16 lg:px-24 w-full bg-white overflow-hidden mt-4 sm:mt-20">
 
       <div className="mx-auto px-4 md:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
@@ -27,7 +27,7 @@ const Impact = () => {
 
           {/* Card 2 → lifted only on sm+ */}
           <div
-            className="relative rounded-3xl shadow-md flex flex-col justify-between overflow-hidden sm:-mt-10"
+            className="relative rounded-3xl rounded-tr-none shadow-md flex flex-col justify-between overflow-hidden sm:-mt-10"
             style={{
               background: "linear-gradient(135deg, #80EAF6 0%, #9080E7 100%)",
             }}
@@ -45,27 +45,32 @@ const Impact = () => {
             />
           </div>
 
+
           {/* Card 3 → pushed down only on sm+ */}
-          <div
-            className="relative rounded-3xl shadow-md flex flex-col justify-between overflow-hidden sm:-mb-10"
-            style={{
-              background: "linear-gradient(135deg, #F9C7E5 0%, #A0E9E1 100%)",
-            }}
-          >
-            <div className="relative z-10 p-4 max-w-[95%]">
-              <h3 className="md:text-[20px] text-[18px] font-bold text-black leading-snug">
-                AI-Driven Smart Matchmaking
-              </h3>
-              <p className="text-[14px] md:text-[14px] text-black mt-2 leading-snug">
-                Helping members connect meaningfully and grow faster
-              </p>
-            </div>
-            <img
-              src="/graph.png"
-              alt="Smart Matchmaking"
-              className="absolute bottom-2 right-2 h-[60px] md:h-[55px] object-contain"
-            />
-          </div>
+<div
+  className="relative rounded-3xl rounded-tl-none shadow-md flex flex-col justify-between overflow-hidden sm:-mb-10"
+  style={{
+    background: "linear-gradient(135deg, #F9C7E5 0%, #A0E9E1 100%)",
+  }}
+>
+  <div className="relative z-10 p-4 max-w-[95%]">
+    <h3 className="md:text-[20px] text-[18px] font-bold text-black leading-snug">
+      AI-Driven Smart Matchmaking
+    </h3>
+    <p className="text-[14px] md:text-[14px] text-black mt-2 leading-snug">
+      Helping members connect meaningfully and grow faster
+    </p>
+  </div>
+
+  {/* Image aligned bottom-left */}
+  <img
+    src="/graph.png"
+    alt="Smart Matchmaking"
+    className="absolute bottom-4 left-4 h-[60px] md:h-[60px] object-contain"
+  />
+</div>
+
+
 
           {/* Card 4 */}
           <div

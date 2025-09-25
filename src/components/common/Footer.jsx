@@ -135,10 +135,12 @@ const Footer = () => {
         {/* Scroll to Top */}
         <button
           onClick={scrollToTop}
-          className="w-[50px] h-[50px] flex items-center justify-center bg-transparent border border-gray-400 rounded-full hover:bg-gray-700"
+          className="fixed bottom-6 right-6 w-[50px] h-[50px] flex items-center justify-center bg-black border border-gray-400 rounded-full hover:bg-gray-700 shadow-lg"
         >
-          <FaArrowUp className="text-[24px]" />
+          <FaArrowUp className="text-[24px] text-white" />
         </button>
+
+
       </div>
 
       {/* ✅ Divider Line */}
