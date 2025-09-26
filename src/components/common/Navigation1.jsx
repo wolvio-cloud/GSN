@@ -30,6 +30,11 @@ const Navigation = () => {
     }
   }, [location.pathname]);
 
+  // Disable scroll when mobile menu is open
+  useEffect(() => {
+    document.body.style.overflow = isOpen ? "hidden" : "auto";
+  }, [isOpen]);
+
   // Check if current route is under About GSN
   const isAboutGSNActive = ["/about-us", "/blogs"].includes(location.pathname);
 
@@ -49,8 +54,7 @@ const Navigation = () => {
         <NavLink
           to="/experience"
           className={({ isActive }) =>
-            `font-bold transition duration-300 ${
-              isActive ? "text-[#F2C063]" : "text-white"
+            `font-bold transition duration-300 ${isActive ? "text-[#F2C063]" : "text-white"
             }`
           }
         >
@@ -59,8 +63,7 @@ const Navigation = () => {
         <NavLink
           to="/our-vision"
           className={({ isActive }) =>
-            `font-bold transition duration-300 ${
-              isActive ? "text-[#F2C063]" : "text-white"
+            `font-bold transition duration-300 ${isActive ? "text-[#F2C063]" : "text-white"
             }`
           }
         >
@@ -69,8 +72,7 @@ const Navigation = () => {
         <NavLink
           to="/community"
           className={({ isActive }) =>
-            `font-bold transition duration-300 ${
-              isActive ? "text-[#F2C063]" : "text-white"
+            `font-bold transition duration-300 ${isActive ? "text-[#F2C063]" : "text-white"
             }`
           }
         >
@@ -79,8 +81,7 @@ const Navigation = () => {
         <NavLink
           to="/franchising"
           className={({ isActive }) =>
-            `font-bold transition duration-300 ${
-              isActive ? "text-[#F2C063]" : "text-white"
+            `font-bold transition duration-300 ${isActive ? "text-[#F2C063]" : "text-white"
             }`
           }
         >
@@ -91,20 +92,18 @@ const Navigation = () => {
         <div className="relative" ref={dropdownRef}>
           <button
             onClick={toggleDropdown}
-            className={`font-bold transition duration-300 flex items-center ${
-              isAboutGSNActive ? "text-[#F2C063]" : "text-white"
-            }`}
+            className={`font-bold transition duration-300 flex items-center ${isAboutGSNActive ? "text-[#F2C063]" : "text-white"
+              }`}
           >
             About GSN
             <FaChevronDown className="ml-1 text-sm" />
           </button>
           {dropdownOpen && (
-            <div className="absolute top-10 md:-left-5 rounded-md shadow-lg border border-white/20 py-2 w-35 z-10">
+            <div className="absolute top-10 md:-left-5 rounded-md shadow-lg border border-white/20 py-2 w-35 z-10 bg-black/90">
               <NavLink
                 to="/about-us"
                 className={({ isActive }) =>
-                  `block px-4 py-2 font-bold rounded-md ${
-                    isActive ? "text-[#F2C063]" : "text-white"
+                  `block px-4 py-2 font-bold rounded-md ${isActive ? "text-[#F2C063]" : "text-white"
                   }`
                 }
               >
@@ -113,8 +112,7 @@ const Navigation = () => {
               <NavLink
                 to="/blogs"
                 className={({ isActive }) =>
-                  `block px-4 py-2 font-bold rounded-md ${
-                    isActive ? "text-[#F2C063]" : "text-white"
+                  `block px-4 py-2 font-bold rounded-md ${isActive ? "text-[#F2C063]" : "text-white"
                   }`
                 }
               >
@@ -140,85 +138,111 @@ const Navigation = () => {
           onClick={toggleMenu}
           className="text-white text-4xl focus:outline-none"
         >
-          {isOpen ? "✕" : "☰"}
+          ☰
         </button>
       </div>
 
-      {/* Mobile Menu */}
+      {/* Mobile Popup Menu */}
       {isOpen && (
-        <div className="absolute top-20 left-0 w-full bg-black/70 backdrop-blur-lg text-white flex flex-col space-y-5 py-6 px-6 md:hidden font-playfair text-lg z-40">
-          <NavLink
-            to="/experience"
-            onClick={toggleMenu}
-            className={({ isActive }) =>
-              `hover:text-[#F2C063] ${isActive ? "text-[#F2C063]" : "text-white"}`
-            }
-          >
-            Experience
-          </NavLink>
-          <NavLink
-            to="/our-vision"
-            onClick={toggleMenu}
-            className={({ isActive }) =>
-              `hover:text-[#F2C063] ${isActive ? "text-[#F2C063]" : "text-white"}`
-            }
-          >
-            Our Vision
-          </NavLink>
-          <NavLink
-            to="/community"
-            onClick={toggleMenu}
-            className={({ isActive }) =>
-              `hover:text-[#F2C063] ${isActive ? "text-[#F2C063]" : "text-white"}`
-            }
-          >
-            Global Community
-          </NavLink>
-          <NavLink
-            to="/franchising"
-            onClick={toggleMenu}
-            className={({ isActive }) =>
-              `hover:text-[#F2C063] ${isActive ? "text-[#F2C063]" : "text-white"}`
-            }
-          >
-            GSN Franchising
-          </NavLink>
+        <div className="fixed inset-0 bg-black/80 flex items-center justify-center z-50">
+          <div className="relative bg-[#111] rounded-2xl shadow-lg w-[95%] h-[90%] p-6 text-white font-playfair overflow-y-auto">
+            {/* Close button inside popup */}
+            <button
+              onClick={toggleMenu}
+              className="absolute top-4 right-4 text-3xl font-bold text-white hover:text-[#F2C063]"
+            >
+              ✕
+            </button>
 
-          <div>
-            <p className={`hover:text-[#F2C063] font-bold ${isAboutGSNActive ? "text-[#F2C063]" : ""}`}>About GSN</p>
-            <div className="pl-4">
+            <div className="flex flex-col space-y-6 mt-8 text-lg">
               <NavLink
-                to="/about-us"
+                to="/experience"
                 onClick={toggleMenu}
                 className={({ isActive }) =>
-                  `block hover:text-[#F2C063] ${isActive ? "text-[#F2C063]" : "text-white"}`
+                  `hover:text-[#F2C063] ${isActive ? "text-[#F2C063]" : "text-white"
+                  }`
                 }
               >
-                About Us
+                Experience
               </NavLink>
               <NavLink
-                to="/blogs"
+                to="/our-vision"
                 onClick={toggleMenu}
                 className={({ isActive }) =>
-                  `block hover:text-[#F2C063] ${isActive ? "text-[#F2C063]" : "text-white"}`
+                  `hover:text-[#F2C063] ${isActive ? "text-[#F2C063]" : "text-white"
+                  }`
                 }
               >
-                Blog & Insights
+                Our Vision
               </NavLink>
+              <NavLink
+                to="/community"
+                onClick={toggleMenu}
+                className={({ isActive }) =>
+                  `hover:text-[#F2C063] ${isActive ? "text-[#F2C063]" : "text-white"
+                  }`
+                }
+              >
+                Global Community
+              </NavLink>
+              <NavLink
+                to="/franchising"
+                onClick={toggleMenu}
+                className={({ isActive }) =>
+                  `hover:text-[#F2C063] ${isActive ? "text-[#F2C063]" : "text-white"
+                  }`
+                }
+              >
+                GSN Franchising
+              </NavLink>
+
+              <div>
+                <p
+                  className={`hover:text-[#F2C063] font-bold ${["/about-us", "/blogs"].includes(location.pathname)
+                      ? "text-[#F2C063]"
+                      : ""
+                    }`}
+                >
+                  About GSN
+                </p>
+                <div className="pl-4 space-y-3 mt-2">
+                  <NavLink
+                    to="/about-us"
+                    onClick={toggleMenu}
+                    className={({ isActive }) =>
+                      `block hover:text-[#F2C063] ${isActive ? "text-[#F2C063]" : "text-white"
+                      }`
+                    }
+                  >
+                    About Us
+                  </NavLink>
+                  <NavLink
+                    to="/blogs"
+                    onClick={toggleMenu}
+                    className={({ isActive }) =>
+                      `block hover:text-[#F2C063] ${isActive ? "text-[#F2C063]" : "text-white"
+                      }`
+                    }
+                  >
+                    Blog & Insights
+                  </NavLink>
+                </div>
+              </div>
+
+              {/* CTA Button (Mobile) */}
+              <Link
+                to="/"
+                state={{ scrollTo: "contact" }}
+                onClick={toggleMenu}
+                className="bg-[#F2C063] text-black font-ubuntu font-semibold px-6 py-3 rounded-full hover:bg-[#e6ad55] transition duration-300 text-center"
+              >
+                Get Invited
+              </Link>
             </div>
           </div>
-
-          {/* CTA Button (Mobile) */}
-          <Link
-            to="/"
-            state={{ scrollTo: "contact" }}
-            onClick={toggleMenu}
-            className="bg-[#F2C063] text-black font-ubuntu font-semibold px-6 py-3 rounded-full hover:bg-[#e6ad55] transition duration-300"
-          >
-            Get Invited
-          </Link>
         </div>
       )}
+
     </nav>
   );
 };

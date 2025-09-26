@@ -1,12 +1,24 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 import { FaInstagram, FaLinkedinIn, FaFacebookF } from "react-icons/fa";
 import { FaXTwitter, FaArrowUp } from "react-icons/fa6";
 
 const Footer = () => {
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
+  const [isVisible, setIsVisible] = useState(false);
+  useEffect(() => {
+    const handleScroll = () => setIsVisible(window.scrollY > 100);
+    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('load', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('load', handleScroll);
+    };
+  }, []);
+
+  const scrollToTop = (e) => {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   return (
@@ -133,12 +145,15 @@ const Footer = () => {
         </div>
 
         {/* Scroll to Top */}
-        <button
-          onClick={scrollToTop}
-          className="fixed bottom-6 right-6 w-[50px] h-[50px] flex items-center justify-center bg-black border border-gray-400 rounded-full hover:bg-gray-700 shadow-lg"
-        >
-          <FaArrowUp className="text-[24px] text-white" />
-        </button>
+        {isVisible && (
+          <button
+            onClick={scrollToTop}
+            className="fixed bottom-6 right-6 w-[50px] h-[50px] flex items-center justify-center bg-black border border-gray-400 rounded-full hover:bg-gray-700 shadow-lg transition-opacity duration-300"
+          >
+            <FaArrowUp className="text-[24px] text-white" />
+          </button>
+        )}
+
 
 
       </div>
