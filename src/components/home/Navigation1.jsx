@@ -64,12 +64,12 @@ const Navigation = () => {
               >
                 About Us
               </a>
-              <a
+              {/*<a
                 href="#blog"
                 className="block px-4 py-2 text-white transition-colors duration-300"
               >
                 Blog & Insights
-              </a>
+              </a> */}
             </div>
           )}
         </div>
@@ -131,13 +131,13 @@ const Navigation = () => {
               >
                 About Us
               </a>
-              <a
+              {/*<a
                 href="#blog"
                 onClick={toggleMenu}
                 className="block hover:text-[#F2C063]"
               >
                 Blog & Insights
-              </a>
+              </a> */}
             </div>
           </div>
           <button className="bg-[#F2C063] text-black font-ubuntu font-semibold px-6 py-3 rounded-full hover:bg-[#e6ad55] transition-all duration-300">

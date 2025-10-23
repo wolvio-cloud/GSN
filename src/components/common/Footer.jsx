@@ -65,11 +65,11 @@ const Footer = () => {
                 GSN Franchising
               </Link>
             </li>
-            <li>
+            {/*<li>
               <Link to="/" className="hover:text-gray-400 cursor-pointer block">
                 Blogs &amp; Insights
               </Link>
-            </li>
+            </li> */}
           </ul>
         </div>
 
