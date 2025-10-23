@@ -88,8 +88,18 @@ const Navigation = () => {
           GSN Franchising
         </NavLink>
 
+        <NavLink
+          to="/about-us"
+          className={({ isActive }) =>
+            `font-bold transition duration-300 ${isActive ? "text-[#F2C063]" : "text-white"
+            }`
+          }
+        >
+          About Us
+        </NavLink>
+
         {/* Dropdown */}
-        <div className="relative" ref={dropdownRef}>
+        {/* <div className="relative" ref={dropdownRef}>
           <button
             onClick={toggleDropdown}
             className={`font-bold transition duration-300 flex items-center ${isAboutGSNActive ? "text-[#F2C063]" : "text-white"
@@ -117,10 +127,10 @@ const Navigation = () => {
                 }
               >
                 Blog & Insights
-              </NavLink>
+              </NavLink> 
             </div>
           )}
-        </div>
+        </div> */}
       </div>
 
       {/* CTA Button (Desktop) */}
@@ -196,7 +206,19 @@ const Navigation = () => {
                 GSN Franchising
               </NavLink>
 
-              <div>
+              <NavLink
+                to="/about-us"
+                onClick={toggleMenu}
+                className={({ isActive }) =>
+                  `hover:text-[#F2C063] ${isActive ? "text-[#F2C063]" : "text-white"
+                  }`
+                }
+              >
+                About Us
+              </NavLink>
+
+
+              {/* <div>
                 <p
                   className={`hover:text-[#F2C063] font-bold ${["/about-us", "/blogs"].includes(location.pathname)
                       ? "text-[#F2C063]"
@@ -227,7 +249,7 @@ const Navigation = () => {
                     Blog & Insights
                   </NavLink>
                 </div>
-              </div>
+              </div> */}
 
               {/* CTA Button (Mobile) */}
               <Link

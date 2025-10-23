@@ -89,15 +89,15 @@ const FAQ = () => {
               }`}
             >
               <div className="flex justify-between items-start">
-                <p className="text-[11px] md:text-[13px] font-ubuntu text-black w-[90%] -mt-1 ">
+                <p className="text-[17px] md:text-[18px] font-ubuntu text-black w-[90%] -mt-1">
                   {faq.question}
                 </p>
-                <div className="text-black text-[20px] md:text-[26px] -mt-2">
+                <div className="text-black text-[22px] md:text-[26px] -mt-2">
                   {openLeftIndex === index ? <FiChevronUp /> : <FiChevronDown />}
                 </div>
               </div>
               {openLeftIndex === index && (
-                <p className="text-[14px] md:text-[16px] font-ubuntu mt-2 md:mt-3 text-black">
+                <p className="text-[13px] md:text-[14px] font-ubuntu mt-2 md:mt-3 text-black leading-relaxed">
                   {faq.answer}
                 </p>
               )}
@@ -116,15 +116,15 @@ const FAQ = () => {
               }`}
             >
               <div className="flex justify-between items-start">
-                <p className="text-[11px] md:text-[13px] font-ubuntu text-black w-[90%] -mt-1">
+                <p className="text-[17px] md:text-[18px] font-ubuntu text-black w-[90%] -mt-1">
                   {faq.question}
                 </p>
-                <div className="text-black text-[20px] md:text-[26px] -mt-2">
+                <div className="text-black text-[22px] md:text-[26px] -mt-2">
                   {openRightIndex === index ? <FiChevronUp /> : <FiChevronDown />}
                 </div>
               </div>
               {openRightIndex === index && (
-                <p className="text-[14px] md:text-[16px] font-ubuntu mt-2 md:mt-3 text-black">
+                <p className="text-[13px] md:text-[14px]  font-ubuntu mt-2 md:mt-3 text-black">
                   {faq.answer}
                 </p>
               )}
