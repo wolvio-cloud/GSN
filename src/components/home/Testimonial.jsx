@@ -1,4 +1,4 @@
-import React, { useMemo } from "react";
+import React, { useMemo, useEffect, useRef, useState } from "react";
 import styles from "./Testimonials.module.css";
 
 const testimonialsData = [
@@ -28,7 +28,7 @@ const TestimonialCard = React.memo(({ t }) => (
         src={t.img}
         alt={t.name}
         className="w-10 h-10 sm:w-12 sm:h-12 rounded-full object-cover"
-        loading="lazy" // ✅ Lazy load images
+        loading="lazy"
       />
       <div>
         <h3 className="text-[14px] sm:text-[16px] font-ubuntu font-bold">{t.name}</h3>
@@ -40,31 +40,44 @@ const TestimonialCard = React.memo(({ t }) => (
 ));
 
 const Testimonials = () => {
-  // ✅ Memoized repeated dataset
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => setIsVisible(entry.isIntersecting),
+      { threshold: 0.2 }
+    );
+    if (sectionRef.current) observer.observe(sectionRef.current);
+    return () => observer.disconnect();
+  }, []);
+
   const repeatedData = useMemo(() => [...testimonialsData, ...testimonialsData], []);
 
   return (
-    <section className="w-full bg-[#1A1A1A] py-20 px-0 text-white">
-      {/* Row 1 */}
-      <div className={`${styles.scrollContainer} ${styles.pauseOnHover} mb-8`}>
-        <div className={`${styles.scrollWrapper} ${styles.scrollLeft}`}>
-          {repeatedData.map((t, i) => (
-            <TestimonialCard key={i} t={t} />
-          ))}
-        </div>
-      </div>
+    <section ref={sectionRef} className="w-full bg-[#1A1A1A] py-20 px-0 text-white">
+      {isVisible && (
+        <>
+          <div className={`${styles.scrollContainer} ${styles.pauseOnHover} mb-8`}>
+            <div className={`${styles.scrollWrapper} ${styles.scrollLeft}`}>
+              {repeatedData.map((t, i) => (
+                <TestimonialCard key={i} t={t} />
+              ))}
+            </div>
+          </div>
 
-      {/* Row 2 */}
-      <div className={`${styles.scrollContainer} ${styles.pauseOnHover}`}>
-        <div className={`${styles.scrollWrapper} ${styles.scrollRight}`}>
-          {repeatedData
-            .slice()
-            .reverse()
-            .map((t, i) => (
-              <TestimonialCard key={`rev-${i}`} t={t} />
-            ))}
-        </div>
-      </div>
+          <div className={`${styles.scrollContainer} ${styles.pauseOnHover}`}>
+            <div className={`${styles.scrollWrapper} ${styles.scrollRight}`}>
+              {repeatedData
+                .slice()
+                .reverse()
+                .map((t, i) => (
+                  <TestimonialCard key={`rev-${i}`} t={t} />
+                ))}
+            </div>
+          </div>
+        </>
+      )}
     </section>
   );
 };

@@ -26,49 +26,54 @@ const Impact = () => {
           </div>
 
           {/* Card 2 → lifted only on sm+ */}
+          {/* Card 2 – Businesses Represented */}
           <div
             className="relative rounded-3xl rounded-tr-none shadow-md flex flex-col justify-between overflow-hidden sm:-mt-10"
             style={{
               background: "linear-gradient(135deg, #80EAF6 0%, #9080E7 100%)",
             }}
           >
-            <div className="relative z-20 p-4 max-w-[70%]">
-              <h3 className="md:text-[20px] text-[18px] font-bold text-black">100+</h3>
-              <p className="text-[16px] md:text-[15px] text-black mt-1 leading-snug">
-                Businesses Represented
+            {/* Text Section */}
+            <div className="relative z-20 p-5 md:p-6 max-w-[60%]">
+              <h3 className="md:text-[22px] text-[20px] font-bold text-black">100+</h3>
+              <p className="text-[15px] md:text-[16px] text-black mt-1 leading-snug">
+                Businesses <br /> Represented
               </p>
             </div>
+
+            {/* Image aligned to bottom-right */}
             <img
               src="/impact.png"
-              alt="Business"
-              className="absolute bottom-0 right-0 max-h-[70%] object-contain z-10"
+              alt="Businesses Represented"
+              className="absolute bottom-0 -right-5 h-[90%] md:h-[95%] object-contain z-10"
             />
           </div>
 
 
-          {/* Card 3 → pushed down only on sm+ */}
-<div
-  className="relative rounded-3xl rounded-tl-none shadow-md flex flex-col justify-between overflow-hidden sm:-mb-10"
-  style={{
-    background: "linear-gradient(135deg, #F9C7E5 0%, #A0E9E1 100%)",
-  }}
->
-  <div className="relative z-10 p-4 max-w-[95%]">
-    <h3 className="md:text-[20px] text-[18px] font-bold text-black leading-snug">
-      AI-Driven Smart Matchmaking
-    </h3>
-    <p className="text-[14px] md:text-[14px] text-black mt-2 leading-snug">
-      Helping members connect meaningfully and grow faster
-    </p>
-  </div>
 
-  {/* Image aligned bottom-left */}
-  <img
-    src="/graph.png"
-    alt="Smart Matchmaking"
-    className="absolute bottom-4 left-4 h-[60px] md:h-[60px] object-contain"
-  />
-</div>
+          {/* Card 3 → pushed down only on sm+ */}
+          <div
+            className="relative rounded-3xl rounded-tl-none shadow-md flex flex-col justify-between overflow-hidden sm:-mb-10"
+            style={{
+              background: "linear-gradient(135deg, #F9C7E5 0%, #A0E9E1 100%)",
+            }}
+          >
+            <div className="relative z-10 p-4 max-w-[95%]">
+              <h3 className="md:text-[20px] text-[18px] font-bold text-black leading-snug">
+                AI-Driven Smart Matchmaking
+              </h3>
+              <p className="text-[14px] md:text-[14px] text-black mt-2 leading-snug">
+                Helping members connect meaningfully and grow faster
+              </p>
+            </div>
+
+            {/* Image aligned bottom-left */}
+            <img
+              src="/graph.png"
+              alt="Smart Matchmaking"
+              className="absolute bottom-4 left-4 h-[60px] md:h-[60px] object-contain"
+            />
+          </div>
 
 
 

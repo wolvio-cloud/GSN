@@ -4,10 +4,11 @@ import Impact from "../components/home/Impact3";
 import Connect from "../components/home/Connect";
 import Card from "../components/home/Card";
 import Path from "../components/home/Path";
-import Testimonials from "../components/home/Testimonial";
+//import Testimonials from "../components/home/Testimonial";
 import Form from "../components/home/Form";
 import { useScale } from "../helpers/useScale";
-
+import React, { Suspense, lazy } from "react";
+const Testimonials = lazy(() => import("../components/home/Testimonial"));
 const Home = () => {
   const baseWidth = 1500;
   const scale = useScale(baseWidth);
@@ -38,7 +39,10 @@ const Home = () => {
       </div>
 
       <Path />
-      <Testimonials />
+       {/* ✅ Lazy load Testimonials only when in viewport */}
+      <Suspense fallback={<div className="text-center text-white py-10">Loading Testimonials...</div>}>
+        <Testimonials />
+      </Suspense>
 
       <div style={scaleStyle}>
         <Form />
